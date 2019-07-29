@@ -22,9 +22,9 @@
     <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.CustomAttributes\Xamarin.Forms.CustomAttributes.csproj" />
     <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Maps\Xamarin.Forms.Maps.csproj" />
     <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Xaml\Xamarin.Forms.Xaml.csproj" />
-    
-    <Import Project="$(XamarinFormsSource).nuspec\Xamarin.Forms.targets" Condition="'$(BuildingInsideVisualStudio)' == 'true'" />
-    <Import Project="$(XamarinFormsSource).nuspec\Xamarin.Forms.targets" Condition="'$(BuildingInsideVisualStudio)' != 'true'" />
   </ItemGroup>
+
+  <Import Project="$(XamarinFormsSource).nuspec\Xamarin.Forms.targets" Condition="'$(BuildingInsideVisualStudio)' == 'true' AND $(FromSource) == 'true'" />
+  <Import Project="$(XamarinFormsSource).nuspec\Xamarin.Forms.targets" Condition="'$(BuildingInsideVisualStudio)' != 'true' AND $(FromSource) == 'true'" />
 
 </Project>
