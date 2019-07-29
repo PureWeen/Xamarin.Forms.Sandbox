@@ -1,5 +1,0 @@
-<Project>
-  <Target Name="TFI" BeforeTargets="Build">
-    <Message Text="$(TargetFrameworkIdentifier)"></Message>
-  </Target>
-</Project>
