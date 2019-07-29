@@ -1,30 +1,7 @@
 <Project>
-  <!--<ItemGroup Condition="$(FromSource) == 'false'">
-    <PackageReference Include="Xamarin.Forms" Version="$(XamarinFormsVersion)">
-    </PackageReference>
-    <PackageReference Include="Xamarin.Forms.Maps" Version="$(XamarinFormsVersion)">
-    </PackageReference>
-    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="$(XamarinFormsVersion)">
-    </PackageReference>
-  </ItemGroup>-->
 
 
-  <PropertyGroup Condition="$(FromSource) == 'true'">
-    <XFDisableTargetsValidation>True</XFDisableTargetsValidation>
-  </PropertyGroup>
-  <Import Condition="$(FromSource) == 'true'" Project="$(XamarinFormsSource).nuspec\Xamarin.Forms.DefaultItems.props" />
-  <Import Condition="$(FromSource) == 'true'" Project="$(XamarinFormsSource).nuspec\Xamarin.Forms.DefaultItems.targets" />
-  <ItemGroup Condition="$(FromSource) == 'true'">
-
-    <!-- A reference to the entire .NET Framework is automatically included -->
-    <ProjectReference ReferenceOutputAssembly="False" Include="$(XamarinFormsSource)Xamarin.Forms.Build.Tasks\Xamarin.Forms.Build.Tasks.csproj" />
-    <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Core\Xamarin.Forms.Core.csproj" />
-    <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.CustomAttributes\Xamarin.Forms.CustomAttributes.csproj" />
-    <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Maps\Xamarin.Forms.Maps.csproj" />
-    <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Xaml\Xamarin.Forms.Xaml.csproj" />
-  </ItemGroup>
-
-  <Import Project="$(XamarinFormsSource).nuspec\Xamarin.Forms.targets" Condition="'$(BuildingInsideVisualStudio)' == 'true' AND $(FromSource) == 'true'" />
-  <Import Project="$(XamarinFormsSource).nuspec\Xamarin.Forms.targets" Condition="'$(BuildingInsideVisualStudio)' != 'true' AND $(FromSource) == 'true'" />
+  <Import Project="Source.targets" Condition="$(FromSource) == 'true'" />
+  <Import Project="Nuget.targets" Condition="$(FromSource) == 'false'" />
 
 </Project>

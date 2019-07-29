@@ -1,38 +1,4 @@
 <Project>
-  <!--<ItemGroup Condition="$(FromSource) == 'false'">
-    <PackageReference Include="Xamarin.Forms" Version="$(XamarinFormsVersion)">
-    </PackageReference>
-    <PackageReference Include="Xamarin.Forms.Maps" Version="$(XamarinFormsVersion)">
-    </PackageReference>
-    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="$(XamarinFormsVersion)">
-    </PackageReference>
-  </ItemGroup>-->
-  <ItemGroup  Condition="$(FromSource) == 'true'">
-    <!--<PackageReference ExcludeAssets="All" Include="Xamarin.Forms" Version="$(XamarinFormsVersion)">
-    </PackageReference>
-    <PackageReference ExcludeAssets="All" Include="Xamarin.Forms.Maps" Version="$(XamarinFormsVersion)">
-    </PackageReference>
-    <PackageReference ExcludeAssets="All" Include="Xamarin.Forms.Visual.Material" Version="$(XamarinFormsVersion)">
-    </PackageReference>-->
-    <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.v4" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="28.0.0.1" />
-    <ProjectReference Include="$(XamarinFormsSource)Stubs\Xamarin.Forms.Platform.Android\Xamarin.Forms.Platform.Android %28Forwarders%29.csproj">
-      <Name>Xamarin.Forms.Platform.Android %28Forwarders%29</Name>
-    </ProjectReference>
-    <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Material.Android\Xamarin.Forms.Material.Android.csproj">
-      <Name>Xamarin.Forms.Material.Android</Name>
-    </ProjectReference>
-    <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Platform.Android.FormsViewGroup\Xamarin.Forms.Platform.Android.FormsViewGroup.csproj">
-      <Name>Xamarin.Forms.Platform.Android.FormsViewGroup</Name>
-    </ProjectReference>
-    <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Platform.Android\Xamarin.Forms.Platform.Android.csproj">
-      <Name>Xamarin.Forms.Platform.Android</Name>
-    </ProjectReference>
-    <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Core\Xamarin.Forms.Core.csproj">
-      <Name>Xamarin.Forms.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-
+  <Import Project="Source.targets" Condition="$(FromSource) == 'true'" />
+  <Import Project="Nuget.targets" Condition="$(FromSource) == 'false'" />
 </Project>
