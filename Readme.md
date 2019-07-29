@@ -1,5 +1,5 @@
 - Root Directory.Builds.Props file settings
-  - FromSource
+  - FromSource (if you change this setting you will most likely need to obj/bin clean and reset VS)
     - false means build from nugets
     - true means build from sources
   - XamarinFormsSource
