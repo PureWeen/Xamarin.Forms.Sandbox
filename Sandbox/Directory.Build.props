@@ -1,0 +1,5 @@
+<Project>
+  <PropertyGroup>
+    <XamarinFormsSource>..\..\Xamarin.Forms\</XamarinFormsSource>
+  </PropertyGroup>
+</Project>
