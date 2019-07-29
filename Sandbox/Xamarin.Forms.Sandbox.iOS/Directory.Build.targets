@@ -1,5 +1,5 @@
 <Project>
-  <ItemGroup Condition="$(FromSource) == 'false'">
+  <!--<ItemGroup Condition="$(FromSource) == 'false'">
     <PackageReference Include="Xamarin.Forms" Version="$(XamarinFormsVersion)">
     </PackageReference>
     <PackageReference Include="Xamarin.Forms.Maps" Version="$(XamarinFormsVersion)">
@@ -9,14 +9,15 @@
     <PackageReference Include="Xamarin.iOS.MaterialComponents">
       <Version>72.2.0.1</Version>
     </PackageReference>
-  </ItemGroup>
+  </ItemGroup>-->
+  
   <ItemGroup  Condition="$(FromSource) == 'true'">
-    <PackageReference ExcludeAssets="All" Include="Xamarin.Forms" Version="$(XamarinFormsVersion)">
+    <!--<PackageReference ExcludeAssets="All" Include="Xamarin.Forms" Version="$(XamarinFormsVersion)">
     </PackageReference>
     <PackageReference ExcludeAssets="All" Include="Xamarin.Forms.Maps" Version="$(XamarinFormsVersion)">
     </PackageReference>
     <PackageReference ExcludeAssets="All" Include="Xamarin.Forms.Visual.Material" Version="$(XamarinFormsVersion)">
-    </PackageReference>
+    </PackageReference>-->
     <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Maps.iOS\Xamarin.Forms.Maps.iOS.csproj">
       <Name>Xamarin.Forms.Maps.iOS</Name>
       <IsAppExtension>false</IsAppExtension>
