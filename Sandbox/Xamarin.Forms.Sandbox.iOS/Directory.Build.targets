@@ -1,39 +1,32 @@
 <Project>
   <ItemGroup>
     <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Maps.iOS\Xamarin.Forms.Maps.iOS.csproj">
-      <Project>{aba078c4-f9bb-4924-8b2b-10fe0d2f5491}</Project>
       <Name>Xamarin.Forms.Maps.iOS</Name>
       <IsAppExtension>false</IsAppExtension>
       <IsWatchApp>false</IsWatchApp>
     </ProjectReference>
     <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Maps\Xamarin.Forms.Maps.csproj">
-      <Project>{7d13bac2-c6a4-416a-b07e-c169b199e52b}</Project>
       <Name>Xamarin.Forms.Maps</Name>
     </ProjectReference>
     <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Core\Xamarin.Forms.Core.csproj">
-      <Project>{57B8B73D-C3B5-4C42-869E-7B2F17D354AC}</Project>
       <Name>Xamarin.Forms.Core</Name>
     </ProjectReference>
     <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Platform.iOS\Xamarin.Forms.Platform.iOS.csproj">
-      <Project>{271193c1-6e7c-429c-a36d-3f1be5267231}</Project>
       <Name>Xamarin.Forms.Platform.iOS</Name>
       <IsAppExtension>false</IsAppExtension>
       <IsWatchApp>false</IsWatchApp>
     </ProjectReference>
     <ProjectReference Include="$(XamarinFormsSource)Stubs\Xamarin.Forms.Platform.iOS\Xamarin.Forms.Platform.iOS %28Forwarders%29.csproj">
-      <Project>{39b3457f-01d8-43d0-8e84-d8c4f73cf48d}</Project>
       <Name>Xamarin.Forms.Platform.iOS %28Forwarders%29</Name>
       <IsAppExtension>false</IsAppExtension>
       <IsWatchApp>false</IsWatchApp>
     </ProjectReference>
     <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Material.iOS\Xamarin.Forms.Material.iOS.csproj">
-      <Project>{8A75B1DC-CEED-4B1B-8675-A7DFFD1E6DE4}</Project>
       <Name>Xamarin.Forms.Material.iOS</Name>
       <IsAppExtension>false</IsAppExtension>
       <IsWatchApp>false</IsWatchApp>
     </ProjectReference>
     <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Xaml\Xamarin.Forms.Xaml.csproj">
-      <Project>{9db2f292-8034-4e06-89ad-98bbda4306b9}</Project>
       <Name>Xamarin.Forms.Xaml</Name>
     </ProjectReference>
     <PackageReference Include="Xamarin.iOS.MaterialComponents">
