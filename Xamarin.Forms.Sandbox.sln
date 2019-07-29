@@ -49,6 +49,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Forms.Platform.iOS"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Forms.Platform.iOS (Forwarders)", "Xamarin.Forms\Stubs\Xamarin.Forms.Platform.iOS\Xamarin.Forms.Platform.iOS (Forwarders).csproj", "{39B3457F-01D8-43D0-8E84-D8C4F73CF48D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFiles", "SolutionFiles", "{D669EF5E-1BFA-48EC-971C-A9BFD965BA07}"
+	ProjectSection(SolutionItems) = preProject
+		Sandbox\Directory.Build.props = Sandbox\Directory.Build.props
+		Sandbox\Directory.Build.targets = Sandbox\Directory.Build.targets
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU

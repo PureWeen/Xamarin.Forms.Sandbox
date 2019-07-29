@@ -4,12 +4,8 @@
     <__XFBuildTasksLocation>$(_XFBuildTasksLocation)</__XFBuildTasksLocation>
     <__XFBuildTasksLocation Condition="'$(__XFBuildTasksLocation)' == '' AND '$(MSBuildRuntimeType)' == 'Core'">$(MSBuildThisFileDirectory).nuspec\netstandard2.0\</__XFBuildTasksLocation>
     <__XFBuildTasksLocation Condition="'$(__XFBuildTasksLocation)' == ''">$(MSBuildThisFileDirectory).nuspec\net46\</__XFBuildTasksLocation>
-	  <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <!--
-    Xamarin projects don't seem to support ItemGroup Conditionals so this doesn't do anything
-    -->
+    
     <FromSource Condition="'$(FromSource)' == ''">true</FromSource>
-
     <XamarinFormsVersion>4.2.0.618605-pre2</XamarinFormsVersion>
   </PropertyGroup>
  </Project>
