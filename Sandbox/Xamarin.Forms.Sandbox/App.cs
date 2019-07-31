@@ -32,45 +32,5 @@ namespace Xamarin.Forms.Sandbox
 			flags.Add("UseLegacyRenderers");
 			Device.SetFlags(flags.Select(x => x).Distinct().ToArray());
 		}
-				
-
-		ContentPage CreateContentPage(View view)
-		{
-			var returnValue = new ContentPage() { Content = view };
-
-			returnValue.On<iOS>().SetUseSafeArea(true);
-			return returnValue;
-		}
-
-
-		ContentPage CreateListViewPage(Func<View> template)
-		{
-			var listView = new ListView(ListViewCachingStrategy.RecycleElement);
-			listView.RowHeight = 500;
-			listView.ItemsSource = Enumerable.Range(0, 1).ToList();
-			listView.ItemTemplate = new DataTemplate(() =>
-			{
-				ViewCell cell = new ViewCell();
-				cell.View = template();
-				return cell;
-			});
-
-			return CreateContentPage(listView);
-		}
-
-
-		StackLayout CreateStackLayout(IEnumerable<View> children, StackOrientation orientation = StackOrientation.Vertical )
-		{
-			var sl = new StackLayout() { Orientation = orientation };
-			foreach (var child in children)
-				sl.Children.Add(child);
-
-			return sl;
-		}
-
-		ContentPage CreateStackLayoutPage(IEnumerable<View> children)
-		{
-			return CreateContentPage(CreateStackLayout(children));
-		}
 	}
 }
