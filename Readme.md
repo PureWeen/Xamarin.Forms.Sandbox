@@ -17,3 +17,16 @@
   - Drop these global files here into a directory above your main projects https://github.com/PureWeen/Xamarin.Forms.Sandbox/tree/master/Sandbox
   - Drop the platform specific *.target files https://github.com/PureWeen/Xamarin.Forms.Sandbox/tree/master/Sandbox/Xamarin.Forms.Sandbox.Android into your platform project folders
   - Remove the references to the Xamarin.Forms nugets from your platform csproj files
+  
+  
+
+## Cloning the repository
+
+Clone repositories using recursive parameter:
+
+	git clone git@github.com:PureWeen/Xamarin.Forms.Sandbox.git --recursive
+
+Or Update
+
+	git submodule update --init --recursive
+
