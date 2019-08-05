@@ -10,7 +10,10 @@ namespace Xamarin.Forms.Sandbox
 	{
 		void InitializeMainPage()
 		{
-			MainPage = new ShellPage();
+            if(Device.RuntimePlatform == Device.UWP)
+                MainPage = new MainPage();
+            else
+			    MainPage = new ShellPage();
 		}
 	}
 }
