@@ -1,10 +1,10 @@
 <Project>
-  <PropertyGroup >
+  <PropertyGroup>
     <XFDisableTargetsValidation>True</XFDisableTargetsValidation>
   </PropertyGroup>
   <Import  Project="$(XamarinFormsSource).nuspec\Xamarin.Forms.DefaultItems.props" />
   <Import  Project="$(XamarinFormsSource).nuspec\Xamarin.Forms.DefaultItems.targets" />
-  <ItemGroup >
+  <ItemGroup>
     <PackageReference ExcludeAssets="All" Include="Xamarin.Forms" Version="$(XamarinFormsVersion)">
     </PackageReference>
     <PackageReference ExcludeAssets="All" Include="Xamarin.Forms.Maps" Version="$(XamarinFormsVersion)">

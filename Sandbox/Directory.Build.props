@@ -6,6 +6,9 @@
     <__XFBuildTasksLocation Condition="'$(__XFBuildTasksLocation)' == ''">$(MSBuildThisFileDirectory).nuspec\net46\</__XFBuildTasksLocation>
     
     <FromSource Condition="'$(FromSource)' == ''">true</FromSource>
+    
+    <AbiBreakTest Condition="'$(AbiBreakTest)' == ''">true</AbiBreakTest>
+    
     <XamarinFormsVersion>4.2.0.618605-pre2</XamarinFormsVersion>
   </PropertyGroup>
  </Project>

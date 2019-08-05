@@ -25,6 +25,10 @@
     <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Core\Xamarin.Forms.Core.csproj">
       <Name>Xamarin.Forms.Core</Name>
     </ProjectReference>
-  </ItemGroup>
 
+    <ProjectReference Condition="'$(AbiBreakTest)' == 'true'" PrivateAssets="All" Include="..\AbiBreak.Android\AbiBreak.Android.csproj">
+      <Project>{6a5e6549-9d5f-4dd4-8d69-2ca96a705e14}</Project>
+      <Name>AbiBreak.Android</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
