@@ -24,4 +24,18 @@
       <Generator>MSBuild:Compile</Generator>
     </None>
   </ItemGroup>
+
+
+  <ItemGroup>
+    <EmbeddedResource Update="TabbedPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <EmbeddedResource Update="TabPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>
