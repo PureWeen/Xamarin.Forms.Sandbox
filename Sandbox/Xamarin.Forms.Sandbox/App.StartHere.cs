@@ -6,14 +6,21 @@ using Xamarin.Forms.StyleSheets;
 
 namespace Xamarin.Forms.Sandbox
 {
-	public partial class App
-	{
-		void InitializeMainPage()
-		{
-            if(Device.RuntimePlatform == Device.UWP)
+    public partial class App
+    {
+        void InitializeMainPage()
+        {
+            bool useTabPage = false;
+            bool useMDP = false;
+
+            if (useMDP)
+                MainPage = new MDP();
+            else if (useTabPage)
+                MainPage = new TabPage();
+            else if (Device.RuntimePlatform == Device.UWP)
                 MainPage = new MainPage();
             else
-			    MainPage = new ShellPage();
-		}
-	}
+                MainPage = new ShellPage();
+        }
+    }
 }
