@@ -11,7 +11,7 @@ namespace Xamarin.Forms.Sandbox
         void InitializeMainPage()
         {
             bool useTabPage = false;
-            bool useMDP = false;
+            bool useMDP = true;
 
             if (useMDP)
                 MainPage = new MDP();
@@ -20,7 +20,7 @@ namespace Xamarin.Forms.Sandbox
             else if (Device.RuntimePlatform == Device.UWP)
                 MainPage = new MainPage();
             else
-                MainPage = new ShellPage();
+                MainPage = new MDP();
         }
     }
 }
