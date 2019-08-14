@@ -4,4 +4,7 @@
     <MSBuild Projects="$(XamarinFormsSource)\Xamarin.Forms.Build.Tasks\Xamarin.Forms.Build.Tasks.csproj" Targets="Restore"></MSBuild>
     <MSBuild Projects="$(XamarinFormsSource)\Xamarin.Forms.Build.Tasks\Xamarin.Forms.Build.Tasks.csproj"></MSBuild>
   </Target>
+  <ItemGroup>
+    <PackageReference Include="PropertyChanged.Fody" Version="3.0.1" />
+  </ItemGroup>
  </Project>

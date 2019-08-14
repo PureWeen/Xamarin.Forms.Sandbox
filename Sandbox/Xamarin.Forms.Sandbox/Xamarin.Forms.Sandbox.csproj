@@ -17,11 +17,6 @@
 
 
   <ItemGroup>
-    <None Update="MainPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
-    <None Update="ShellPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
+    <PackageReference Include="PropertyChanged.Fody" Version="3.0.1" />
   </ItemGroup>
 </Project>

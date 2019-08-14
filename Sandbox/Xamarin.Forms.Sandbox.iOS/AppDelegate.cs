@@ -22,9 +22,10 @@ namespace Xamarin.Forms.Sandbox.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            Forms.SetFlags("CollectionView_Experimental");
             global::Xamarin.Forms.Forms.Init();
 			FormsMaterial.Init();
-            LoadApplication(new App());
+            LoadApplication(new App144.App());
 
             return base.FinishedLaunching(app, options);
         }
