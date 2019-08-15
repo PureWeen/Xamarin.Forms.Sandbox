@@ -15,6 +15,12 @@ namespace Xamarin.Forms.Sandbox
 		public MainPage()
 		{
 			InitializeComponent();
+            btnClick.Clicked += BtnClick_Clicked;
 		}
-	}
+
+        async void BtnClick_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MainPage());
+        }
+    }
 }
