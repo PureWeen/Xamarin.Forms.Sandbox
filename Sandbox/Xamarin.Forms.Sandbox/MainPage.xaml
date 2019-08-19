@@ -5,12 +5,8 @@
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.UseSafeArea="true">
 
-    <NavigationPage.TitleView>
-        <Grid>
-            <Button Text="I am a Button"  />
-        </Grid>
-    </NavigationPage.TitleView>
     <StackLayout>
-        <Button Text="I am a Button"  />
+        <Label x:Name="label" Text=""></Label>
+        <Button x:Name="button" Text="I am a Button" />
     </StackLayout>
 </ContentPage>

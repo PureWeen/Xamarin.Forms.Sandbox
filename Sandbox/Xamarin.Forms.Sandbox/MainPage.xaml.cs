@@ -15,6 +15,17 @@ namespace Xamarin.Forms.Sandbox
 		public MainPage()
 		{
 			InitializeComponent();
-		}
-	}
+            label.Text = "<b>I am some text</b>";
+            button.Clicked += Button_Clicked;
+
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            if (label.TextType == TextType.Html)
+                label.TextType = TextType.PlainText;
+            else
+                label.TextType = TextType.Html;
+        }
+    }
 }

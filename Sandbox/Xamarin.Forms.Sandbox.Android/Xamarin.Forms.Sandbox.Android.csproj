@@ -88,7 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Xamarin.Forms.Sandbox\Xamarin.Forms.Sandbox.csproj">
-      <Project>{e155c410-e5de-464d-9ed7-2b1e672438ed}</Project>
+      <Project>{86B83BE1-12DD-4396-991D-FE14634BD303}</Project>
       <Name>Xamarin.Forms.Sandbox</Name>
     </ProjectReference>
   </ItemGroup>
