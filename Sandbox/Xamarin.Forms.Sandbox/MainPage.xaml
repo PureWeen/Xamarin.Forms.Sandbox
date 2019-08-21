@@ -5,8 +5,4 @@
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.UseSafeArea="true">
 
-    <StackLayout>
-        <Label x:Name="label" Text=""></Label>
-        <Button x:Name="button" Text="I am a Button" />
-    </StackLayout>
 </ContentPage>
