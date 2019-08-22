@@ -16,5 +16,10 @@ namespace Xamarin.Forms.Sandbox
 		{
 			InitializeComponent();
 		}
-	}
+
+        void Button_Clicked(object sender, EventArgs e)
+        {
+            dp.Focus();
+        }
+    }
 }

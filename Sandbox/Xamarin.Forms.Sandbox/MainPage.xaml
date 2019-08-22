@@ -5,12 +5,8 @@
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.UseSafeArea="true">
 
-    <NavigationPage.TitleView>
-        <Grid>
-            <Button Text="I am a Button"  />
-        </Grid>
-    </NavigationPage.TitleView>
     <StackLayout>
-        <Button Text="I am a Button"  />
+        <DatePicker x:Name="dp" IsVisible="False"></DatePicker>
+        <Button Text="I am a Button" Clicked="Button_Clicked"  />
     </StackLayout>
 </ContentPage>
