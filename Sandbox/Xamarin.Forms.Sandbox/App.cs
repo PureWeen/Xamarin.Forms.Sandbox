@@ -21,9 +21,6 @@ namespace Xamarin.Forms.Sandbox
 
 		void AddStyleSheet()
 		{
-			this.Resources.Add(StyleSheet.FromResource(
-				"Styles.css",
-				IntrospectionExtensions.GetTypeInfo(typeof(App)).Assembly));
 		}
 
 		void InitializeLegacyRenderers()
