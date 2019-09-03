@@ -1106,9 +1106,9 @@ namespace Xamarin.Forms.Sandbox.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Id.listMode = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.listMode;
 			global::Xamarin.Forms.Material.Android.Resource.Id.list_item = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.list_item;
 			global::Xamarin.Forms.Material.Android.Resource.Id.main_appbar = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.main_appbar;
-			global::Xamarin.Forms.Material.Android.Resource.Id.main_scrollview = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.main_scrollview;
 			global::Xamarin.Forms.Material.Android.Resource.Id.main_tablayout = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.main_tablayout;
 			global::Xamarin.Forms.Material.Android.Resource.Id.main_toolbar = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.main_toolbar;
+			global::Xamarin.Forms.Material.Android.Resource.Id.main_viewpager = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.main_viewpager;
 			global::Xamarin.Forms.Material.Android.Resource.Id.masked = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.masked;
 			global::Xamarin.Forms.Material.Android.Resource.Id.materialformsedittext = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.materialformsedittext;
 			global::Xamarin.Forms.Material.Android.Resource.Id.media_actions = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.media_actions;
@@ -1158,7 +1158,6 @@ namespace Xamarin.Forms.Sandbox.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Id.select_dialog_listview = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.select_dialog_listview;
 			global::Xamarin.Forms.Material.Android.Resource.Id.selected = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.selected;
 			global::Xamarin.Forms.Material.Android.Resource.Id.shellcontent_appbar = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.shellcontent_appbar;
-			global::Xamarin.Forms.Material.Android.Resource.Id.shellcontent_scrollview = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.shellcontent_scrollview;
 			global::Xamarin.Forms.Material.Android.Resource.Id.shellcontent_toolbar = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.shellcontent_toolbar;
 			global::Xamarin.Forms.Material.Android.Resource.Id.shortcut = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.shortcut;
 			global::Xamarin.Forms.Material.Android.Resource.Id.showCustom = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.showCustom;
@@ -3687,9 +3686,9 @@ namespace Xamarin.Forms.Sandbox.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Id.listMode = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.listMode;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.list_item = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.list_item;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.main_appbar = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.main_appbar;
-			global::Xamarin.Forms.Platform.Android.Resource.Id.main_scrollview = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.main_scrollview;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.main_tablayout = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.main_tablayout;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.main_toolbar = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.main_toolbar;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.main_viewpager = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.main_viewpager;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.masked = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.masked;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.media_actions = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.media_actions;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.message = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.message;
@@ -3738,7 +3737,6 @@ namespace Xamarin.Forms.Sandbox.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Id.select_dialog_listview = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.select_dialog_listview;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.selected = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.selected;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.shellcontent_appbar = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.shellcontent_appbar;
-			global::Xamarin.Forms.Platform.Android.Resource.Id.shellcontent_scrollview = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.shellcontent_scrollview;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.shellcontent_toolbar = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.shellcontent_toolbar;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.shortcut = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.shortcut;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.showCustom = global::Xamarin.Forms.Sandbox.Droid.Resource.Id.showCustom;
@@ -8769,17 +8767,17 @@ namespace Xamarin.Forms.Sandbox.Droid
 			// aapt resource value: 0x7f0d00d0
 			public const int main_appbar = 2131558608;
 			
-			// aapt resource value: 0x7f0d00d3
-			public const int main_scrollview = 2131558611;
-			
 			// aapt resource value: 0x7f0d00d2
 			public const int main_tablayout = 2131558610;
 			
 			// aapt resource value: 0x7f0d00d1
 			public const int main_toolbar = 2131558609;
 			
-			// aapt resource value: 0x7f0d00da
-			public const int masked = 2131558618;
+			// aapt resource value: 0x7f0d00d3
+			public const int main_viewpager = 2131558611;
+			
+			// aapt resource value: 0x7f0d00d9
+			public const int masked = 2131558617;
 			
 			// aapt resource value: 0x7f0d00bc
 			public const int materialformsedittext = 2131558588;
@@ -8928,9 +8926,6 @@ namespace Xamarin.Forms.Sandbox.Droid
 			// aapt resource value: 0x7f0d00d4
 			public const int shellcontent_appbar = 2131558612;
 			
-			// aapt resource value: 0x7f0d00d6
-			public const int shellcontent_scrollview = 2131558614;
-			
 			// aapt resource value: 0x7f0d00d5
 			public const int shellcontent_toolbar = 2131558613;
 			
@@ -8946,8 +8941,8 @@ namespace Xamarin.Forms.Sandbox.Droid
 			// aapt resource value: 0x7f0d0037
 			public const int showTitle = 2131558455;
 			
-			// aapt resource value: 0x7f0d00d7
-			public const int sliding_tabs = 2131558615;
+			// aapt resource value: 0x7f0d00d6
+			public const int sliding_tabs = 2131558614;
 			
 			// aapt resource value: 0x7f0d00ae
 			public const int smallLabel = 2131558574;
@@ -9051,8 +9046,8 @@ namespace Xamarin.Forms.Sandbox.Droid
 			// aapt resource value: 0x7f0d0088
 			public const int title_template = 2131558536;
 			
-			// aapt resource value: 0x7f0d00d8
-			public const int toolbar = 2131558616;
+			// aapt resource value: 0x7f0d00d7
+			public const int toolbar = 2131558615;
 			
 			// aapt resource value: 0x7f0d0050
 			public const int top = 2131558480;
@@ -9093,8 +9088,8 @@ namespace Xamarin.Forms.Sandbox.Droid
 			// aapt resource value: 0x7f0d001b
 			public const int view_offset_helper = 2131558427;
 			
-			// aapt resource value: 0x7f0d00d9
-			public const int visible = 2131558617;
+			// aapt resource value: 0x7f0d00d8
+			public const int visible = 2131558616;
 			
 			// aapt resource value: 0x7f0d002d
 			public const int wide = 2131558445;
