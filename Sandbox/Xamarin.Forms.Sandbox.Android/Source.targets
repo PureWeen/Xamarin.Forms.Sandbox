@@ -6,10 +6,10 @@
     </PackageReference>
     <PackageReference ExcludeAssets="All" Include="Xamarin.Forms.Visual.Material" Version="$(XamarinFormsVersion)">
     </PackageReference>
-    <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.v4" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.3" />
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.3" />
+    <PackageReference Include="Xamarin.Android.Support.v4" Version="28.0.0.3" />
+    <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="28.0.0.3" />
     <ProjectReference Include="$(XamarinFormsSource)Stubs\Xamarin.Forms.Platform.Android\Xamarin.Forms.Platform.Android %28Forwarders%29.csproj">
       <Name>Xamarin.Forms.Platform.Android %28Forwarders%29</Name>
     </ProjectReference>
