@@ -18,9 +18,10 @@ namespace Xamarin.Forms.Sandbox.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
-			global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-			global::Xamarin.Forms.FormsMaterial.Init(this, savedInstanceState);
-			LoadApplication(new App());
+            global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
+            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            global::Xamarin.Forms.FormsMaterial.Init(this, savedInstanceState);
+            LoadApplication(new App());
         }
     }
 }
