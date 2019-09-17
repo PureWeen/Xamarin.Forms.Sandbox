@@ -23,8 +23,6 @@ namespace Xamarin.Forms.Sandbox
                 MainPage = new MDP();
             else if (useTabPage)
                 MainPage = new TabPage();
-            else if (Device.RuntimePlatform == Device.UWP)
-                MainPage = new MainPage();
             else
                 MainPage = new ShellPage();
         }
