@@ -6,7 +6,7 @@
 		{
 			InitializeComponent();
 
-			LoadApplication(new Sandbox.App());
+			LoadApplication(new Xaminals.App());
 		}
 	}
 }

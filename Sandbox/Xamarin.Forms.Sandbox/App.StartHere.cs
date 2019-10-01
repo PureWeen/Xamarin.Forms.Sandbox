@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
 using Xamarin.Forms.StyleSheets;
-using Xaminals;
 
 namespace Xamarin.Forms.Sandbox
 {
@@ -11,8 +10,21 @@ namespace Xamarin.Forms.Sandbox
     {
         void InitializeMainPage()
         {
+            bool useTabPage = false;
+            bool useMDP = false;
+            bool useMainPage = false;
+            bool useNavigationPage = false;
 
-            MainPage = new AppShell();
+            if(useNavigationPage)
+                MainPage = new NavigationPage(new MainPage());
+            else if (useMainPage)
+                MainPage = new MainPage();
+            else if (useMDP)
+                MainPage = new MDP();
+            else if (useTabPage)
+                MainPage = new TabPage();
+            else
+                MainPage = new ShellPage();
         }
     }
 }
