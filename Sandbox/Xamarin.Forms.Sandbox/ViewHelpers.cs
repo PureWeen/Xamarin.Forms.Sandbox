@@ -18,17 +18,21 @@ namespace Xamarin.Forms.Sandbox
         }
 
 
-        public static ListView CreateListView(Func<View> template)
+        public static ListView CreateListView(Func<View> template = null)
         {
             var listView = new ListView(ListViewCachingStrategy.RecycleElement);
             listView.RowHeight = 200;
             listView.ItemsSource = Enumerable.Range(0, 1000).ToList();
-            listView.ItemTemplate = new DataTemplate(() =>
+
+            if (template != null)
             {
-                ViewCell cell = new ViewCell();
-                cell.View = template();
-                return cell;
-            });
+                listView.ItemTemplate = new DataTemplate(() =>
+                {
+                    ViewCell cell = new ViewCell();
+                    cell.View = template();
+                    return cell;
+                });
+            }
 
             return listView;
         }
@@ -51,6 +55,18 @@ namespace Xamarin.Forms.Sandbox
         public static ContentPage CreateStackLayoutPage(IEnumerable<View> children)
         {
             return CreateContentPage(CreateStackLayout(children));
+        }
+
+        public static Picker CreatePicker(System.Collections.IEnumerable data = null)
+        {
+            System.Collections.IList itemSource = null;
+
+            if (data != null)
+                itemSource = new List<object>(data.Cast<object>());
+            else
+                itemSource = new List<object> { "cat", "dog", "Rat", "mouse", "monkey" };
+
+            return new Picker() { ItemsSource = itemSource };
         }
     }
 }
