@@ -7,7 +7,7 @@
     
     <FromSource Condition="'$(FromSource)' == ''">true</FromSource>
     
-    <AbiBreakTest Condition="'$(AbiBreakTest)' == ''">false</AbiBreakTest>
+    <AbiBreakTest Condition="'$(AbiBreakTest)' == ''">true</AbiBreakTest>
     <FromSource Condition="'$(AbiBreakTest)' == 'true'">true</FromSource>
     
     <XamarinFormsVersion>4.2.0.618605-pre2</XamarinFormsVersion>
