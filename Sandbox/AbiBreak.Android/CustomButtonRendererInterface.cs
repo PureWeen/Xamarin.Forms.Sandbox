@@ -9,7 +9,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms.Platform.Android.FastRenderers;
 
-//[assembly: ExportRenderer(typeof(Xamarin.Forms.Button), typeof(CustomButtonRenderer))]
+[assembly: ExportRenderer(typeof(Xamarin.Forms.Button), typeof(CustomButtonRendererInterface))]
 namespace AbiBreak.Android
 {
     public class CustomButtonRendererInterface : AppCompatButton, IVisualElementRenderer
