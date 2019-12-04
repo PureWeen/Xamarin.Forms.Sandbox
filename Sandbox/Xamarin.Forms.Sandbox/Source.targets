@@ -12,7 +12,7 @@
     <PackageReference ExcludeAssets="All" Include="Xamarin.Forms.Visual.Material" Version="$(XamarinFormsVersion)">
     </PackageReference>
     <!-- A reference to the entire .NET Framework is automatically included -->
-    <ProjectReference ReferenceOutputAssembly="False" Include="$(XamarinFormsSource)Xamarin.Forms.Build.Tasks\Xamarin.Forms.Build.Tasks.csproj" />
+    <ProjectReference Condition="$(TargetFramework) == 'netstandard2.0'" ReferenceOutputAssembly="False" Include="$(XamarinFormsSource)Xamarin.Forms.Build.Tasks\Xamarin.Forms.Build.Tasks.csproj" />
     <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Core\Xamarin.Forms.Core.csproj" />
     <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.CustomAttributes\Xamarin.Forms.CustomAttributes.csproj" />
     <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Maps\Xamarin.Forms.Maps.csproj" />
