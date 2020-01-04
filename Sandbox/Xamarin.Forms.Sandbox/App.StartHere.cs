@@ -13,7 +13,7 @@ namespace Xamarin.Forms.Sandbox
             bool useTabPage = false;
             bool useMDP = false;
             bool useMainPage = false;
-            bool useNavigationPage = false;
+            bool useNavigationPage = true;
 
             if(useNavigationPage)
                 MainPage = new NavigationPage(new MainPage());
@@ -24,7 +24,7 @@ namespace Xamarin.Forms.Sandbox
             else if (useTabPage)
                 MainPage = new TabPage();
             else
-                MainPage = new ShellPage();
+                MainPage = new RoutingInShell.AppShell();
         }
     }
 }

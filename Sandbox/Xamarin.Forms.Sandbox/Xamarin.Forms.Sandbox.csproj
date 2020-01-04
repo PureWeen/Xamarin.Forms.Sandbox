@@ -59,4 +59,25 @@
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
+
+
+  <ItemGroup>
+    <EmbeddedResource Update="Recreate\App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <EmbeddedResource Update="Recreate\AppShell.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <EmbeddedResource Update="Recreate\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>
