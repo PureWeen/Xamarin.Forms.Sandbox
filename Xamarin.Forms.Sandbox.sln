@@ -7,11 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "XamarinSource", "XamarinSou
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.Forms.Build.Tasks", "Xamarin.Forms\Xamarin.Forms.Build.Tasks\Xamarin.Forms.Build.Tasks.csproj", "{557343D2-D626-419A-B9AA-2FDD90ECF228}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Forms.Maps.Android", "Xamarin.Forms\Xamarin.Forms.Maps.Android\Xamarin.Forms.Maps.Android.csproj", "{BD50B39A-EBC5-408F-9C5E-923A8EBAE473}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.Forms.Maps.Android", "Xamarin.Forms\Xamarin.Forms.Maps.Android\Xamarin.Forms.Maps.Android.csproj", "{BD50B39A-EBC5-408F-9C5E-923A8EBAE473}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Forms.Platform.UAP", "Xamarin.Forms\Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.csproj", "{00D8D049-FFAA-4759-8FC9-1ECA30777F72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.Forms.Platform.UAP", "Xamarin.Forms\Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.csproj", "{00D8D049-FFAA-4759-8FC9-1ECA30777F72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Forms.Maps.UWP", "Xamarin.Forms\Xamarin.Forms.Maps.UWP\Xamarin.Forms.Maps.UWP.csproj", "{04D89A60-78EF-4A32-AE17-87E47E0233A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.Forms.Maps.UWP", "Xamarin.Forms\Xamarin.Forms.Maps.UWP\Xamarin.Forms.Maps.UWP.csproj", "{04D89A60-78EF-4A32-AE17-87E47E0233A5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Forms.Core.UnitTests", "Xamarin.Forms\Xamarin.Forms.Core.UnitTests\Xamarin.Forms.Core.UnitTests.csproj", "{00259593-A283-47A5-ACB7-9C3819B16364}"
 EndProject
@@ -31,11 +31,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Forms.Sandbox.Andro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Forms.Platform.Android.FormsViewGroup", "Xamarin.Forms\Xamarin.Forms.Platform.Android.FormsViewGroup\Xamarin.Forms.Platform.Android.FormsViewGroup.csproj", "{3B72465B-ACAE-43AE-9327-10F372FE5F80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Forms.Material.Android", "Xamarin.Forms\Xamarin.Forms.Material.Android\Xamarin.Forms.Material.Android.csproj", "{E1586CE6-8EAC-4388-A15A-1AABF108B5F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.Forms.Material.Android", "Xamarin.Forms\Xamarin.Forms.Material.Android\Xamarin.Forms.Material.Android.csproj", "{E1586CE6-8EAC-4388-A15A-1AABF108B5F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Forms.Platform.Android", "Xamarin.Forms\Xamarin.Forms.Platform.Android\Xamarin.Forms.Platform.Android.csproj", "{0E16E70A-D6DD-4323-AD5D-363ABFF42D6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.Forms.Platform.Android", "Xamarin.Forms\Xamarin.Forms.Platform.Android\Xamarin.Forms.Platform.Android.csproj", "{0E16E70A-D6DD-4323-AD5D-363ABFF42D6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Forms.Platform.Android (Forwarders)", "Xamarin.Forms\Stubs\Xamarin.Forms.Platform.Android\Xamarin.Forms.Platform.Android (Forwarders).csproj", "{6E53FEB1-1100-46AE-8013-17BBA35CC197}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.Forms.Platform.Android (Forwarders)", "Xamarin.Forms\Stubs\Xamarin.Forms.Platform.Android\Xamarin.Forms.Platform.Android (Forwarders).csproj", "{6E53FEB1-1100-46AE-8013-17BBA35CC197}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Forms.Sandbox.iOS", "Sandbox\Xamarin.Forms.Sandbox.iOS\Xamarin.Forms.Sandbox.iOS.csproj", "{160053B8-745A-41DB-9B33-30479729D6DC}"
 EndProject
@@ -1308,6 +1308,7 @@ Global
 		{160053B8-745A-41DB-9B33-30479729D6DC}.Debug|ARM.ActiveCfg = Debug|iPhone
 		{160053B8-745A-41DB-9B33-30479729D6DC}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{160053B8-745A-41DB-9B33-30479729D6DC}.Debug|iPhone.Build.0 = Debug|iPhone
+		{160053B8-745A-41DB-9B33-30479729D6DC}.Debug|iPhone.Deploy.0 = Debug|iPhone
 		{160053B8-745A-41DB-9B33-30479729D6DC}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
 		{160053B8-745A-41DB-9B33-30479729D6DC}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
 		{160053B8-745A-41DB-9B33-30479729D6DC}.Debug|x64.ActiveCfg = Debug|iPhone
