@@ -11,5 +11,6 @@
     <FromSource Condition="'$(AbiBreakTest)' == 'true'">true</FromSource>
     
     <XamarinFormsVersion>4.2.0.618605-pre2</XamarinFormsVersion>
+    <NoWarn>$(NoWarn);NU1605</NoWarn>
   </PropertyGroup>
  </Project>

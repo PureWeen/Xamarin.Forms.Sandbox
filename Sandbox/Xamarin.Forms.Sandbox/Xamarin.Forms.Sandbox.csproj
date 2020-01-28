@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <NoWarn>$(NoWarn);NU1605</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -15,48 +16,9 @@
     <None Remove="Source.targets" />
   </ItemGroup>
 
-
-  <ItemGroup>
-    <None Update="MainPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
-    <None Update="ShellPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </None>
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <EmbeddedResource Update="TabbedPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <EmbeddedResource Update="TabPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <EmbeddedResource Update="MDP.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <EmbeddedResource Update="MDPMaster.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <EmbeddedResource Update="MDPDetail.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
+  <!--<ItemGroup>
+    <PackageReference IncludeAssets="compile" Include="ReactiveUI.Events.XamForms" Version="11.1.11" />
+    <PackageReference IncludeAssets="compile" Include="ReactiveUI.XamForms" Version="11.1.11" />
+  </ItemGroup>-->
+  
 </Project>
