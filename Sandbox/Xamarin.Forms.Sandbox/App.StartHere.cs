@@ -29,6 +29,14 @@ namespace Xamarin.Forms.Sandbox
 
         public static Application GetApplication()
         {
+            Forms.Device.SetFlags(new List<string> { 
+                "Shell_UWP_Experimental", 
+                "StateTriggers_Experimental",
+                "IndicatorView_Experimental",
+                "CarouselView_Experimental",
+                "SwipeView_Experimental",
+                "MediaElement_Experimental"});
+
             return new App();
         }
     }
