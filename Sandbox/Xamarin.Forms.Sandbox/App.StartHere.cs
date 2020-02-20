@@ -26,5 +26,10 @@ namespace Xamarin.Forms.Sandbox
             else
                 MainPage = new ShellPage();
         }
+
+        public static Application GetApplication()
+        {
+            return new App();
+        }
     }
 }

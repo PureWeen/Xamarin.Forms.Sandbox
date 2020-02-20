@@ -25,7 +25,7 @@ namespace Xamarin.Forms.Sandbox.iOS
             global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
             global::Xamarin.Forms.Forms.Init();
             FormsMaterial.Init();
-            LoadApplication(new App());
+            LoadApplication(Sandbox.App.GetApplication());
 
             return base.FinishedLaunching(app, options);
         }
