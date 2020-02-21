@@ -152,5 +152,11 @@
       <Name>Xamarin.Forms.Sandbox</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\coffee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\calculator.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
