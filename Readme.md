@@ -30,3 +30,12 @@ Or Update
 
 	git submodule update --init --recursive
 
+
+## Updating the submodule
+After you have pulled down the submodule it's good to make sure the submodule is using the latest source code
+or whatever branch you are wanting to test against
+
+```bash
+cd Xamarin.Forms
+git checkout 4.5.0
+```
