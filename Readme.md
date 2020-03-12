@@ -24,7 +24,7 @@
 
 Clone repositories using recursive parameter:
 
-	git clone git@github.com:PureWeen/Xamarin.Forms.Sandbox.git --recursive
+	git clone https://github.com/PureWeen/Xamarin.Forms.Sandbox.git --recursive
 
 Or Update
 
