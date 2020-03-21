@@ -3,17 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Xamarin.Forms.Sandbox.ShellPage"
             xmlns:local="clr-namespace:Xamarin.Forms.Sandbox">
-    <!--<Shell.Resources>
-        <StyleSheet Source="/Styles.css" />
-    </Shell.Resources>-->
-    <!--<Shell.FlyoutHeader>
-        <StackLayout>
-            <Button Text="I am a Button"  />
-        </StackLayout>
-    </Shell.FlyoutHeader>-->
-    <FlyoutItem Title="Sandbox">
+    <!-- Create a style for the Label that's part of the flyout template-->
+    <Shell.Resources>
+        <Style TargetType="Label" Class="FlyoutItem">
+            <Setter Property="TextColor" Value="#FF0000" />
+            <Setter Property="HeightRequest" Value="100" />
+        </Style>
+    </Shell.Resources>
+    <MenuItem Text="Test Url" Command="{Binding OpenUrlCommand}"></MenuItem>
+    <FlyoutItem Title="Sandbox" StyleClass="FlyoutItem">
+        <Tab Route="Section1">
+            <ShellContent Route="Content1" ContentTemplate="{DataTemplate local:MainPage}">
+            </ShellContent>
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Some Uri Page" StyleClass="FlyoutItem">
         <Tab>
-            <ShellContent ContentTemplate="{DataTemplate local:MainPage}">
+            <ShellContent Route="Page" Title="Page" ContentTemplate="{DataTemplate local:DeepLinkedPage}">
             </ShellContent>
         </Tab>
     </FlyoutItem>

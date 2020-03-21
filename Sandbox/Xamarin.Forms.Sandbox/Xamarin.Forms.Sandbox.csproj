@@ -15,7 +15,19 @@
     <None Remove="Nuget.targets" />
     <None Remove="Source.targets" />
   </ItemGroup>
-
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.1" />    
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="DeepLinkedPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="ModalPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
   <!--<ItemGroup>
     <PackageReference IncludeAssets="compile" Include="ReactiveUI.Events.XamForms" Version="11.1.11" />
     <PackageReference IncludeAssets="compile" Include="ReactiveUI.XamForms" Version="11.1.11" />

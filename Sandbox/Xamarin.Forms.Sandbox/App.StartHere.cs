@@ -10,6 +10,7 @@ namespace Xamarin.Forms.Sandbox
     {
         void InitializeMainPage()
         {
+            Routing.RegisterRoute("ModalPage", typeof(ModalPage));
             bool useTabPage = false;
             bool useMDP = false;
             bool useMainPage = false;
