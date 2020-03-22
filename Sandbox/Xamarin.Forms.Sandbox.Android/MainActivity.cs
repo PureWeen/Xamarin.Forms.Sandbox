@@ -10,7 +10,10 @@ using Android.Content;
 
 namespace Xamarin.Forms.Sandbox.Droid
 {
-    [Activity(Label = "Xamarin.Forms.Sandbox", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "Xamarin.Forms.Sandbox", Icon = "@mipmap/icon", Theme = "@style/MainTheme",
+        LaunchMode = LaunchMode.SingleTop,
+        MainLauncher = true, 
+        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     [IntentFilter(new[] { global::Android.Content.Intent.ActionView },
                        AutoVerify = true,
                        Categories = new[]
@@ -34,9 +37,10 @@ namespace Xamarin.Forms.Sandbox.Droid
             (Shell.Current as ShellPage).ProcessInitialNavigation(Intent?.Data?.ToString());
         }
 
-        protected override void OnResume()
+        protected override void OnNewIntent(Intent intent)
         {
-            base.OnResume(); 
+            base.OnNewIntent(intent);
+            (Shell.Current as ShellPage).ProcessInitialNavigation(intent?.Data?.ToString());
         }
     }
 }

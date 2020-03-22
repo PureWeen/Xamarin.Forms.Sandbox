@@ -2,25 +2,44 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Xamarin.Forms.Sandbox.ShellPage"
-            xmlns:local="clr-namespace:Xamarin.Forms.Sandbox">
+            xmlns:local="clr-namespace:Xamarin.Forms.Sandbox"
+            FlyoutHeaderBehavior="Scroll">
     <!-- Create a style for the Label that's part of the flyout template-->
-    <Shell.Resources>
-        <Style TargetType="Label" Class="FlyoutItem">
-            <Setter Property="TextColor" Value="#FF0000" />
-            <Setter Property="HeightRequest" Value="100" />
+    <!--<Shell.Resources>
+        <Style TargetType="Label" Class="MainPageFlyoutItem">
+            <Setter Property="TextColor" Value="Purple" />
+            <Setter Property="TextDecorations" Value="Underline"></Setter>
         </Style>
-    </Shell.Resources>
-    <MenuItem Text="Test Url" Command="{Binding OpenUrlCommand}"></MenuItem>
-    <FlyoutItem Title="Sandbox" StyleClass="FlyoutItem">
-        <Tab Route="Section1">
-            <ShellContent Route="Content1" ContentTemplate="{DataTemplate local:MainPage}">
-            </ShellContent>
+    </Shell.Resources>-->
+    <!--<Shell.FlyoutHeader>
+        <Image Source="header.png"></Image>
+    </Shell.FlyoutHeader>-->
+    <FlyoutItem Title="Home Page">
+        <ShellContent Route="HomePage" ContentTemplate="{DataTemplate local:HomePage}">
+        </ShellContent>
+    </FlyoutItem>
+    <FlyoutItem Title="Account">
+        <Tab Title="Details" Route="Details">
+            <ShellContent ContentTemplate="{DataTemplate local:AccountDetails}"></ShellContent>
+        </Tab>
+        <Tab Title="Settings" Route="Settings">
+            <ShellContent ContentTemplate="{DataTemplate local:AccountSettings}"></ShellContent>
         </Tab>
     </FlyoutItem>
-    <FlyoutItem Title="Some Uri Page" StyleClass="FlyoutItem">
-        <Tab>
-            <ShellContent Route="Page" Title="Page" ContentTemplate="{DataTemplate local:DeepLinkedPage}">
+    <TabBar Title="Some Uri Page">
+        <Tab Title="Welcome" Route="Page">
+            <ShellContent ContentTemplate="{DataTemplate local:DeepLinkedPage}">
             </ShellContent>
         </Tab>
-    </FlyoutItem>
+        <Tab Title="To The">
+            <ShellContent ContentTemplate="{DataTemplate local:DeepLinkedPage}">
+            </ShellContent>
+        </Tab>
+        <Tab Title="Deep">
+            <ShellContent ContentTemplate="{DataTemplate local:DeepLinkedPage}">
+            </ShellContent>
+        </Tab>
+    </TabBar>
+    <MenuItem Text="https://dotnetconf.net/Page?Id=12" Command="{Binding OpenUrlCommand}">
+    </MenuItem>
 </Shell>

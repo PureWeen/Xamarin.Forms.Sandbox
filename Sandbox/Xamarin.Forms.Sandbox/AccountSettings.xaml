@@ -4,11 +4,10 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Xamarin.Forms.Sandbox.ModalPage"
-             Shell.PresentationMode="Modal">
+             x:Class="Xamarin.Forms.Sandbox.AccountSettings">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcwefome to Xawefmarin.Formwefs!"
+            <Label Text="Welcome to Xamarin.Forms!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>

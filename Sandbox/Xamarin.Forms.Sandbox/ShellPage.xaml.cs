@@ -39,6 +39,9 @@ namespace Xamarin.Forms.Sandbox
 		
 		public ShellPage()
 		{
+			if (this.Items?.Count > 0)
+				this.Items.Clear();
+
 			InitializeComponent();
 			this.BindingContext = new ShellViewModel();
 			this.Navigating += OnShellPageNavigating;
@@ -72,6 +75,11 @@ namespace Xamarin.Forms.Sandbox
 				catch { }
 			}
 		}
+
+		async void Button_Clicked(object sender, EventArgs e)
+		{
+			await GoToAsync("MainPage");
+		}
 	}
 
 	public class ShellViewModel : INotifyPropertyChanged
@@ -84,7 +92,7 @@ namespace Xamarin.Forms.Sandbox
 		{
 			OpenUrlCommand = new Command(async () =>
 			{
-				await Xamarin.Essentials.Launcher.TryOpenAsync(@"https://dotnetconf.net/Page?id=12");
+				await Xamarin.Essentials.Launcher.TryOpenAsync(@"https://dotnetconf.net/Page?Id=12");
 			});
 		}
 	}

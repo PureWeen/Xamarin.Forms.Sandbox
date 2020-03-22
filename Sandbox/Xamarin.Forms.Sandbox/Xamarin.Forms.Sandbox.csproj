@@ -28,6 +28,21 @@
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="HomePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="AccountDetails.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="AccountSettings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
   <!--<ItemGroup>
     <PackageReference IncludeAssets="compile" Include="ReactiveUI.Events.XamForms" Version="11.1.11" />
     <PackageReference IncludeAssets="compile" Include="ReactiveUI.XamForms" Version="11.1.11" />

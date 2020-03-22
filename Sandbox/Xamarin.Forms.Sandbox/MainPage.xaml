@@ -7,6 +7,6 @@
              ios:Page.UseSafeArea="true">
 
     <StackLayout>
-        <Button Text="Push Modal Page" Clicked="OnModalPushClicked"  />
+        <Button Text="Push Mowefwefdal Page" Clicked="OnModalPushClicked"  />
     </StackLayout>
 </ContentPage>

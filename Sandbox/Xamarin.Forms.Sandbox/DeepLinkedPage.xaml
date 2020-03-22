@@ -7,9 +7,9 @@
              x:Class="Xamarin.Forms.Sandbox.DeepLinkedPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Welcome to Your Deep Linked Page!!!!!!" />
+            <Label FontSize="50" Text="{Binding Id}"></Label>
+            <Button Text="Return To //HomePage" Clicked="Button_Clicked"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
