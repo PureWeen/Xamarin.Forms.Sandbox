@@ -7,11 +7,8 @@
              x:Class="Xamarin.Forms.Sandbox.AccountCustomers">
     <Shell.SearchHandler>
         <local:CustomerSearchHandler 
-            
             ItemsSource="{Binding Customers}"
-            ShowsResults="True"
-            >
-            
+            ShowsResults="True">
         </local:CustomerSearchHandler>
     </Shell.SearchHandler>
     <ContentPage.Content>

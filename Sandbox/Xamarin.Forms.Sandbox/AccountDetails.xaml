@@ -8,16 +8,21 @@
              Title="Details"
              x:Class="Xamarin.Forms.Sandbox.AccountDetails">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add Customer" Clicked="Button_Clicked"></ToolbarItem>
+        <ToolbarItem 
+            Text="Add Customer" 
+            Clicked="Button_Clicked">
+        </ToolbarItem>
     </ContentPage.ToolbarItems>
-    <!--<Shell.TitleView>
+    <Shell.TitleView>
         <StackLayout>
-            <Label TextColor="White" Text="Hello from the TitleView" 
+            <Label TextColor="Crimson"
+                   Text="Hello from the TitleView" 
                    VerticalOptions="CenterAndExpand" 
-                   HorizontalOptions="End"
-                   VerticalTextAlignment="Center"></Label>
+                   HorizontalOptions="Center"
+                   VerticalTextAlignment="Center">
+            </Label>
         </StackLayout>
-    </Shell.TitleView>-->
+    </Shell.TitleView>
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Welcome to Your Details. I need a TitleView" FontSize="30"

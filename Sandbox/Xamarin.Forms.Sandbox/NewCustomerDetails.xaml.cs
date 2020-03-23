@@ -30,19 +30,23 @@ namespace Xamarin.Forms.Sandbox
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            Shell.Current.Navigating += Current_Navigating;
+            Shell.Current.Navigating += ShellNavigating;
         }
 
-        private void Current_Navigating(object sender, ShellNavigatingEventArgs e)
+        private async void ShellNavigating(object sender, ShellNavigatingEventArgs e)
         {
+            // No Back Button For You!!!
             if (!(entryCustomer?.Text?.Length > 0))
+            {
                 e.Cancel();
+                await DisplayAlert("ERROR", "Nope!! You better just fill out the form.", "FINE");
+            }
         }
 
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
-            Shell.Current.Navigating -= Current_Navigating;
+            Shell.Current.Navigating -= ShellNavigating;
         }
 
         private void entryCustomer_TextChanged(object sender, TextChangedEventArgs e)
