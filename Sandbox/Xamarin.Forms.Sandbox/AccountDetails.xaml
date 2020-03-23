@@ -5,7 +5,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              Shell.TabBarIsVisible="True"
+             Title="Details"
              x:Class="Xamarin.Forms.Sandbox.AccountDetails">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add Customer" Clicked="Button_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
     <!--<Shell.TitleView>
         <StackLayout>
             <Label TextColor="White" Text="Hello from the TitleView" 

@@ -9,7 +9,6 @@
         <BackButtonBehavior 
             TextOverride="Save" 
             Command="{Binding GoBack}">
-            
         </BackButtonBehavior>
     </Shell.BackButtonBehavior>
     <ContentPage.Content>

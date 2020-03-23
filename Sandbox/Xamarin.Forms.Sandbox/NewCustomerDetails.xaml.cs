@@ -18,14 +18,31 @@ namespace Xamarin.Forms.Sandbox
             InitializeComponent();
             GoBack = new Command(async () =>
             {
-                if (GoBack.CanExecute(null))
+                if (entryCustomer?.Text?.Length > 0)
                     await Shell.Current.GoToAsync("..");
-            }, canExecute: ()=>
-            {
-                return entryCustomer?.Text?.Length > 0;
+                else
+                    await DisplayAlert("ERROR", "Please fill out the form. Maybe try the back button?", "Ok");
             });
 
             BindingContext = this;
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            Shell.Current.Navigating += Current_Navigating;
+        }
+
+        private void Current_Navigating(object sender, ShellNavigatingEventArgs e)
+        {
+            if (!(entryCustomer?.Text?.Length > 0))
+                e.Cancel();
+        }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            Shell.Current.Navigating -= Current_Navigating;
         }
 
         private void entryCustomer_TextChanged(object sender, TextChangedEventArgs e)
