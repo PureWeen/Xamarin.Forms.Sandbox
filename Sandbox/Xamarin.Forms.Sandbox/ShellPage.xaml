@@ -7,23 +7,22 @@
         FlyoutHeaderBehavior="Scroll"
        >
     <!--<Shell.FlyoutHeader>
-        <Image Source="header.png"></Image>
+        <StackLayout>
+            <Image Source="header.png"></Image>
+        </StackLayout>
     </Shell.FlyoutHeader>-->
     <FlyoutItem Title="Home Page">
         <ShellContent Route="HomePage" ContentTemplate="{DataTemplate local:HomePage}">
         </ShellContent>
     </FlyoutItem>
-    
-    
-    
-    
-    <!--<FlyoutItem StyleClass="MainPageFlyoutItem" Title="Account">
-        --><!-- Boring Icons.-->
-        <!-- Display me in the flyout menu.--><!--
-        <Tab Title="Details" Route="Details" FlyoutIcon="bear.png" Icon="dog.png">
+
+    <!--Boring Icons.
+         Display me in the flyout menu.-->
+    <!--<FlyoutItem Title="Account">
+        <Tab Title="Details" Route="Details">
             <ShellContent ContentTemplate="{DataTemplate local:AccountDetails}"></ShellContent>
         </Tab>
-        <Tab Title="Settings" Route="Settings" Icon="cat.png">
+        <Tab Title="Settings" Route="Settings">
             <ShellContent ContentTemplate="{DataTemplate local:AccountSettings}"></ShellContent>
         </Tab>
     </FlyoutItem>-->

@@ -23,7 +23,7 @@ namespace Xamarin.Forms.Sandbox
 			this.Navigated += OnShellNavigated;
 		}
 
-		async void OnShellNavigated(object sender, ShellNavigatedEventArgs e)
+		void OnShellNavigated(object sender, ShellNavigatedEventArgs e)
 		{
 			Preferences.Set("LastKnownUrl", e.Current.Location.ToString());
 		}
