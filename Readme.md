@@ -29,7 +29,13 @@ Clone repositories using recursive parameter:
 Or Update
 
 	git submodule update --init --recursive
-
+	
+### Cloning dotnetconf demo
+```bash
+git clone https://github.com/PureWeen/Xamarin.Forms.Sandbox.git 
+git checkout  dotnet_conf
+git submodule update --init --recursive
+```
 
 ## Updating the submodule
 After you have pulled down the submodule it's good to make sure the submodule is using the latest source code
