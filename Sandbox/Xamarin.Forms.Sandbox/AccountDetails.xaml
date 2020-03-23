@@ -13,7 +13,7 @@
             Clicked="Button_Clicked">
         </ToolbarItem>
     </ContentPage.ToolbarItems>
-    <Shell.TitleView>
+    <!--<Shell.TitleView>
         <StackLayout>
             <Label TextColor="Crimson"
                    Text="Hello from the TitleView" 
@@ -22,13 +22,12 @@
                    VerticalTextAlignment="Center">
             </Label>
         </StackLayout>
-    </Shell.TitleView>
+    </Shell.TitleView>-->
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Welcome to Your Details. I need a TitleView" FontSize="30"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalTextAlignment="Center"/>
-            <Button Text="Add Customer Details" Clicked="Button_Clicked"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
