@@ -13,10 +13,17 @@ namespace Xamarin.Forms.Sandbox
 {
 	public partial class App : Application
 	{
-		public App()
+		public static Application GetApplication()
 		{
-			Device.SetFlags(new[] { "Shell_UWP_Experimental", "CollectionView_Experimental" });
-			InitializeMainPage();
+			Forms.Device.SetFlags(new List<string> {
+				"Shell_UWP_Experimental",
+				"StateTriggers_Experimental",
+				"IndicatorView_Experimental",
+				"CarouselView_Experimental",
+				"SwipeView_Experimental",
+				"MediaElement_Experimental"});
+
+			return new App();
 		}
 
 		void AddStyleSheet()

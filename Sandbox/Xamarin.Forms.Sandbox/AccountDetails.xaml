@@ -4,12 +4,21 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             Shell.TabBarIsVisible="True"
              x:Class="Xamarin.Forms.Sandbox.AccountDetails">
+    <!--<Shell.TitleView>
+        <StackLayout>
+            <Label TextColor="White" Text="Hello from the TitleView" 
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="End"
+                   VerticalTextAlignment="Center"></Label>
+        </StackLayout>
+    </Shell.TitleView>-->
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="Welcome to Your Details. I need a TitleView" FontSize="30"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalTextAlignment="Center"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -6,40 +6,13 @@ using Xamarin.Forms.StyleSheets;
 
 namespace Xamarin.Forms.Sandbox
 {
-    public partial class App
+    public partial class App : Application
     {
-        void InitializeMainPage()
+        public App()
         {
             Routing.RegisterRoute("ModalPage", typeof(ModalPage));
-            Routing.RegisterRoute("MainPage", typeof(MainPage));
-            bool useTabPage = false;
-            bool useMDP = false;
-            bool useMainPage = false;
-            bool useNavigationPage = false;
 
-            if(useNavigationPage)
-                MainPage = new NavigationPage(new MainPage());
-            else if (useMainPage)
-                MainPage = new MainPage();
-            else if (useMDP)
-                MainPage = new MDP();
-            else if (useTabPage)
-                MainPage = new TabPage();
-            else
-                MainPage = new ShellPage();
-        }
-
-        public static Application GetApplication()
-        {
-            Forms.Device.SetFlags(new List<string> { 
-                "Shell_UWP_Experimental", 
-                "StateTriggers_Experimental",
-                "IndicatorView_Experimental",
-                "CarouselView_Experimental",
-                "SwipeView_Experimental",
-                "MediaElement_Experimental"});
-
-            return new App();
+            MainPage = new ShellPage();
         }
     }
 }

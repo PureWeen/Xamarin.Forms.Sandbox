@@ -7,8 +7,9 @@
              x:Class="Xamarin.Forms.Sandbox.HomePage">
     <ContentPage.Content>
         <StackLayout>
-            <Label FontSize="30" HorizontalTextAlignment="Center" Text="Welcome to the Home Page Experience"
-                VerticalOptions="CenterAndExpand"  />
+            <Label Text="Welcome to Your Home Page. I need a title" FontSize="30"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalTextAlignment="Center"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

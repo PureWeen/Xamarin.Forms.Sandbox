@@ -16,5 +16,10 @@ namespace Xamarin.Forms.Sandbox
         {
             InitializeComponent();
         }
+
+        async void OnModalPushClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("ModalPage");
+        }
     }
 }

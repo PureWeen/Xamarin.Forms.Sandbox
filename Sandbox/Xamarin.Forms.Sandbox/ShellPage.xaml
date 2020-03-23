@@ -1,16 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Add Some Style to the Shell-->
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Xamarin.Forms.Sandbox.ShellPage"
-            xmlns:local="clr-namespace:Xamarin.Forms.Sandbox"
-            FlyoutHeaderBehavior="Scroll">
-    <!-- Create a style for the Label that's part of the flyout template-->
-    <!--<Shell.Resources>
-        <Style TargetType="Label" Class="MainPageFlyoutItem">
-            <Setter Property="TextColor" Value="Purple" />
-            <Setter Property="TextDecorations" Value="Underline"></Setter>
-        </Style>
-    </Shell.Resources>-->
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="Xamarin.Forms.Sandbox.ShellPage"
+        xmlns:local="clr-namespace:Xamarin.Forms.Sandbox"
+        FlyoutHeaderBehavior="Scroll"
+       >
     <!--<Shell.FlyoutHeader>
         <Image Source="header.png"></Image>
     </Shell.FlyoutHeader>-->
@@ -18,15 +13,23 @@
         <ShellContent Route="HomePage" ContentTemplate="{DataTemplate local:HomePage}">
         </ShellContent>
     </FlyoutItem>
-    <FlyoutItem Title="Account">
-        <Tab Title="Details" Route="Details">
+    
+    
+    
+    
+    <!--<FlyoutItem StyleClass="MainPageFlyoutItem" Title="Account">
+        --><!-- Boring Icons.-->
+        <!-- Display me in the flyout menu.--><!--
+        <Tab Title="Details" Route="Details" FlyoutIcon="bear.png" Icon="dog.png">
             <ShellContent ContentTemplate="{DataTemplate local:AccountDetails}"></ShellContent>
         </Tab>
-        <Tab Title="Settings" Route="Settings">
+        <Tab Title="Settings" Route="Settings" Icon="cat.png">
             <ShellContent ContentTemplate="{DataTemplate local:AccountSettings}"></ShellContent>
         </Tab>
-    </FlyoutItem>
-    <TabBar Title="Some Uri Page">
+    </FlyoutItem>-->
+    
+    
+    <!--<TabBar Title="Goto Uri Page">
         <Tab Title="Welcome" Route="Page">
             <ShellContent ContentTemplate="{DataTemplate local:DeepLinkedPage}">
             </ShellContent>
@@ -39,7 +42,72 @@
             <ShellContent ContentTemplate="{DataTemplate local:DeepLinkedPage}">
             </ShellContent>
         </Tab>
-    </TabBar>
-    <MenuItem Text="https://dotnetconf.net/Page?Id=12" Command="{Binding OpenUrlCommand}">
+    </TabBar>-->
+    
+    <!--<MenuItem Text="Open Modal Page" Command="{Binding OpenModalCommand}">
     </MenuItem>
+    <MenuItem Text="https://dotnetconf.net/Page?Id=12" Command="{Binding OpenUrlCommand}">
+    </MenuItem>-->
+
+
+    <!--https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/shell/flyout#default-template-for-flyoutitems-and-menuitems-->
+    <Shell.Resources>
+        <Style TargetType="Label" Class="MainPageFlyoutItem">
+            <Setter Property="TextColor" Value="Purple" />
+            <Setter Property="TextDecorations" Value="Underline"></Setter>
+        </Style>
+        <DataTemplate x:Key="CustomFlyoutTemplate">
+            <Grid BackgroundColor="Yellow" HeightRequest="{x:OnPlatform Android=100}" >
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                            </VisualState>
+                            <VisualState x:Name="Selected">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="#F2F2F2" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </VisualStateManager.VisualStateGroups>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="{x:OnPlatform Android=54, iOS=50}"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding FlyoutIcon}"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    HeightRequest="{x:OnPlatform Android=24, iOS=22}"
+                    WidthRequest="{x:OnPlatform Android=24, iOS=22}">
+                </Image>
+                <Label VerticalOptions="Center"
+                    Text="{Binding Title}"
+                    FontSize="{x:OnPlatform Android=14, iOS=Small}"
+                    FontAttributes="Bold" Grid.Column="1">
+                    <Label.TextColor>
+                        <OnPlatform x:TypeArguments="Color">
+                            <OnPlatform.Platforms>
+                                <On Platform="Android" Value="#D2000000" />
+                            </OnPlatform.Platforms>
+                        </OnPlatform>
+                    </Label.TextColor>
+                    <Label.Margin>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <OnPlatform.Platforms>
+                                <On Platform="Android" Value="20, 0, 0, 0" />
+                            </OnPlatform.Platforms>
+                        </OnPlatform>
+                    </Label.Margin>
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <OnPlatform.Platforms>
+                                <On Platform="Android" Value="sans-serif-medium" />
+                            </OnPlatform.Platforms>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+            </Grid>
+        </DataTemplate>
+    </Shell.Resources>
 </Shell>

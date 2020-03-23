@@ -8,7 +8,7 @@
              Shell.PresentationMode="Modal">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcwefome to Xawefmarin.Formwefs!"
+            <Label Text="Let's get it modal in here" FontSize="30"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
