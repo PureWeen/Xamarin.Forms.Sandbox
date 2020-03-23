@@ -16,15 +16,18 @@
         </ShellContent>
     </FlyoutItem>
 
-    <!--Boring Icons.
-         Display me in the flyout menu.-->
-    <!--<FlyoutItem Title="Account">
-        <Tab Title="Details">
+    <!-- Boring Icons.
+         Display me in the flyout menu
+         Different Icons
+         Dress up the Flyout Items
+        -->
+    <!--<FlyoutItem Title="Account" Icon="elephant.png" FlyoutDisplayOptions="AsSingleItem">
+        <Tab StyleClass="MainPageFlyoutItem" Title="Details" FlyoutDisplayOptions="AsSingleItem">
             <ShellContent Route="Location" Title="Location" ContentTemplate="{DataTemplate local:AccountDetails}" />
             <ShellContent Route="Customer" Title="Customer" ContentTemplate="{DataTemplate local:AccountCustomers}" />
         </Tab>
-        <Tab Title="Settings" Route="Settings">
-            <ShellContent ContentTemplate="{DataTemplate local:AccountSettings}"/>
+        <Tab Title="Settings">
+            <ShellContent Route="Settings" ContentTemplate="{DataTemplate local:AccountSettings}"/>
         </Tab>
     </FlyoutItem>-->
     
@@ -42,9 +45,9 @@
             <ShellContent ContentTemplate="{DataTemplate local:DeepLinkedPage}">
             </ShellContent>
         </Tab>
-    </TabBar>-->
-    
-    <!--<MenuItem Text="Open Modal Page" Command="{Binding OpenModalCommand}">
+    </TabBar>
+
+    <MenuItem Shell.MenuItemTemplate="{StaticResource CustomFlyoutTemplate}" Text="Open Modal Page" Command="{Binding OpenModalCommand}">
     </MenuItem>
     <MenuItem Text="https://dotnetconf.net/Page?Id=12" Command="{Binding OpenUrlCommand}">
     </MenuItem>-->
@@ -66,14 +69,16 @@
             <Setter Property="Shell.TabBarTitleColor" Value="Red"/>
         </Style>
         <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
-        <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />-->
+        <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}">
+        </Style>-->
+
         
         <Style TargetType="Label" Class="MainPageFlyoutItem">
             <Setter Property="TextColor" Value="Purple" />
             <Setter Property="TextDecorations" Value="Underline"></Setter>
         </Style>
         <DataTemplate x:Key="CustomFlyoutTemplate">
-            <Grid BackgroundColor="Yellow" HeightRequest="{x:OnPlatform Android=100}" >
+            <Grid BackgroundColor="CornflowerBlue" HeightRequest="{x:OnPlatform Android=100}" >
                 <VisualStateManager.VisualStateGroups>
                     <VisualStateGroupList>
                         <VisualStateGroup x:Name="CommonStates">
@@ -99,7 +104,7 @@
                 </Image>
                 <Label VerticalOptions="Center"
                     Text="{Binding Title}"
-                    FontSize="{x:OnPlatform Android=14, iOS=Small}"
+                    FontSize="{x:OnPlatform Android=24, iOS=Small}"
                     FontAttributes="Bold" Grid.Column="1">
                     <Label.TextColor>
                         <OnPlatform x:TypeArguments="Color">
