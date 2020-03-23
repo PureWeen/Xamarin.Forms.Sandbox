@@ -19,11 +19,12 @@
     <!--Boring Icons.
          Display me in the flyout menu.-->
     <!--<FlyoutItem Title="Account">
-        <Tab Title="Details" Route="Details">
-            <ShellContent ContentTemplate="{DataTemplate local:AccountDetails}"></ShellContent>
+        <Tab Title="Details">
+            <ShellContent Route="Location" Title="Location" ContentTemplate="{DataTemplate local:AccountDetails}" />
+            <ShellContent Route="Customer" Title="Customer" ContentTemplate="{DataTemplate local:AccountCustomers}" />
         </Tab>
         <Tab Title="Settings" Route="Settings">
-            <ShellContent ContentTemplate="{DataTemplate local:AccountSettings}"></ShellContent>
+            <ShellContent ContentTemplate="{DataTemplate local:AccountSettings}"/>
         </Tab>
     </FlyoutItem>-->
     
