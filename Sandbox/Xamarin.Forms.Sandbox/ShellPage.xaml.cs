@@ -25,7 +25,6 @@ namespace Xamarin.Forms.Sandbox
 
 		async void OnShellNavigated(object sender, ShellNavigatedEventArgs e)
 		{
-			await GoToAsync("https://dotnetconf.net/Details?Id=12");
 			Preferences.Set("LastKnownUrl", e.Current.Location.ToString());
 		}
 
