@@ -23,7 +23,7 @@
             <ShellContent Route="Location" Title="Location" ContentTemplate="{DataTemplate local:AccountDetails}" />
             <ShellContent Route="Customer" Title="Customer" ContentTemplate="{DataTemplate local:AccountCustomers}" />
         </Tab>
-        <Tab Title="Settings" Route="Settings" Icon="coffee.png">
+        <Tab Title="Settings" Route="Settings">
             <ShellContent ContentTemplate="{DataTemplate local:AccountSettings}"/>
         </Tab>
     </FlyoutItem>-->
