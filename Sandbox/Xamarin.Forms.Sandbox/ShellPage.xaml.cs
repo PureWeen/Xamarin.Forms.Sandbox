@@ -36,7 +36,11 @@ namespace Xamarin.Forms.Sandbox
 		{
 			if(!String.IsNullOrWhiteSpace(url))
 			{
-				await this.GoToAsync(url);
+				try
+				{
+					await this.GoToAsync(url);
+				}
+				catch { }
 				return;
 			}
 

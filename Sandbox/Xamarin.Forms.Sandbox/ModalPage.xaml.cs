@@ -16,5 +16,11 @@ namespace Xamarin.Forms.Sandbox
         {
             InitializeComponent();
         }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            Shell.Current.FlyoutIsPresented = false;
+        }
     }
 }

@@ -4,6 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             Shell.NavBarIsVisible="True"
+             Shell.TabBarIsVisible="True"
              x:Class="Xamarin.Forms.Sandbox.AccountSettings">
     <ContentPage.Content>
         <StackLayout>
