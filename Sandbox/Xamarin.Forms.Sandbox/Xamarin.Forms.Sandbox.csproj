@@ -48,6 +48,11 @@
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="NewCustomerDetails.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
   <!--<ItemGroup>
     <PackageReference IncludeAssets="compile" Include="ReactiveUI.Events.XamForms" Version="11.1.11" />
     <PackageReference IncludeAssets="compile" Include="ReactiveUI.XamForms" Version="11.1.11" />

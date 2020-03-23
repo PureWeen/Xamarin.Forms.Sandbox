@@ -2,12 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:Xamarin.Forms.Sandbox"
              mc:Ignorable="d"
              x:Class="Xamarin.Forms.Sandbox.AccountCustomers">
+    <Shell.SearchHandler>
+        <local:CustomerSearchHandler 
+            
+            ItemsSource="{Binding Customers}"
+            ShowsResults="True"
+            >
+            
+        </local:CustomerSearchHandler>
+    </Shell.SearchHandler>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="Search for a Customer" x:Name="lblCustomer"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>

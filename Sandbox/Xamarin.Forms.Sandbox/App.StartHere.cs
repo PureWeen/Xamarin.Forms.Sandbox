@@ -11,7 +11,7 @@ namespace Xamarin.Forms.Sandbox
         public App()
         {
             Routing.RegisterRoute("ModalPage", typeof(ModalPage));
-
+            Routing.RegisterRoute(nameof(NewCustomerDetails), typeof(NewCustomerDetails));
             MainPage = new ShellPage();
         }
     }
