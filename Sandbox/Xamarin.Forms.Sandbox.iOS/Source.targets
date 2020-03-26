@@ -35,9 +35,6 @@
     <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Xaml\Xamarin.Forms.Xaml.csproj">
       <Name>Xamarin.Forms.Xaml</Name>
     </ProjectReference>
-    <PackageReference Include="Xamarin.iOS.MaterialComponents">
-      <Version>72.2.0.1</Version>
-    </PackageReference>
   </ItemGroup>
 
 </Project>
