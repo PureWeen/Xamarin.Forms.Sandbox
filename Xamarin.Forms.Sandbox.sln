@@ -63,6 +63,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.Forms.DualScreen", "Xamarin.Forms\Xamarin.Forms.DualScreen\Xamarin.Forms.DualScreen.csproj", "{EFFED41C-D9BE-4FD5-AFB3-8E363A29A28F}"
 EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Xamarin.Forms\Xamarin.Flex\Xamarin.Flex.projitems*{500e30b4-260d-4b02-b77a-983d61df8423}*SharedItemsImports = 5
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
 		Ad-Hoc|ARM = Ad-Hoc|ARM

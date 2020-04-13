@@ -10,12 +10,16 @@ namespace Xamarin.Forms.Sandbox
     {
         void InitializeMainPage()
         {
+            Routing.RegisterRoute(nameof(SandboxNavigationPage), typeof(SandboxNavigationPage));
+            Routing.RegisterRoute(nameof(ModalNavigationPage), typeof(ModalNavigationPage));
+            Routing.RegisterRoute(nameof(MainPage), typeof(MainPage));
+
             bool useTabPage = false;
             bool useMDP = false;
             bool useMainPage = false;
             bool useNavigationPage = false;
 
-            if(useNavigationPage)
+            if (useNavigationPage)
                 MainPage = new NavigationPage(new MainPage());
             else if (useMainPage)
                 MainPage = new MainPage();
@@ -35,6 +39,7 @@ namespace Xamarin.Forms.Sandbox
                 "IndicatorView_Experimental",
                 "CarouselView_Experimental",
                 "SwipeView_Experimental",
+                "AppTheme_Experimental",
                 "MediaElement_Experimental"});
 
             return new App();
