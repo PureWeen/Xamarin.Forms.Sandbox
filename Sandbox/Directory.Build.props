@@ -6,11 +6,16 @@
     <__XFBuildTasksLocation Condition="'$(__XFBuildTasksLocation)' == ''">$(MSBuildThisFileDirectory).nuspec\net46\</__XFBuildTasksLocation>
     
     <FromSource Condition="'$(FromSource)' == ''">true</FromSource>
+    <IncludeDualScreen Condition="'$(IncludeDualScreen)' == ''">false</IncludeDualScreen>
+    <IncludeMaterial Condition="'$(IncludeMaterial)' == ''">false</IncludeMaterial>
+    <IncludeMaps Condition="'$(IncludeMaps)' == ''">false</IncludeMaps>
     
     <AbiBreakTest Condition="'$(AbiBreakTest)' == ''">false</AbiBreakTest>
     <FromSource Condition="'$(AbiBreakTest)' == 'true'">true</FromSource>
     
     <XamarinFormsVersion>4.6.0.494-pre2</XamarinFormsVersion>
     <NoWarn>$(NoWarn);NU1605</NoWarn>
+  
+    <DefineConstants Condition="'$(IncludeMaterial)' == 'true'">$(DefineConstants);VISUAL</DefineConstants>
   </PropertyGroup>
  </Project>

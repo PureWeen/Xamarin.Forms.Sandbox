@@ -23,7 +23,9 @@ namespace Xamarin.Forms.Sandbox.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+#if VISUAL
             FormsMaterial.Init();
+#endif
             LoadApplication(Sandbox.App.GetApplication());
 
             return base.FinishedLaunching(app, options);

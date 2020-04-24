@@ -2,22 +2,22 @@
   <PropertyGroup>
     <XFDisableTargetsValidation>True</XFDisableTargetsValidation>
   </PropertyGroup>
-  <Import  Project="$(XamarinFormsSource).nuspec\Xamarin.Forms.DefaultItems.props" />
-  <Import  Project="$(XamarinFormsSource).nuspec\Xamarin.Forms.DefaultItems.targets" />
+  <Import Project="$(XamarinFormsSource).nuspec\Xamarin.Forms.DefaultItems.props" />
+  <Import Project="$(XamarinFormsSource).nuspec\Xamarin.Forms.DefaultItems.targets" />
   <ItemGroup>
     <PackageReference ExcludeAssets="All" Include="Xamarin.Forms" Version="$(XamarinFormsVersion)">
     </PackageReference>
-    <PackageReference ExcludeAssets="All" Include="Xamarin.Forms.Maps" Version="$(XamarinFormsVersion)">
+    <PackageReference Condition="'$(IncludeMaps)' == 'true'" ExcludeAssets="All" Include="Xamarin.Forms.Maps" Version="$(XamarinFormsVersion)">
     </PackageReference>
-    <PackageReference ExcludeAssets="All" Include="Xamarin.Forms.Visual.Material" Version="$(XamarinFormsVersion)">
+    <PackageReference  Condition="'$(IncludeMaterial)' == 'true'" ExcludeAssets="All" Include="Xamarin.Forms.Visual.Material" Version="$(XamarinFormsVersion)">
     </PackageReference>
     <!-- A reference to the entire .NET Framework is automatically included -->
     <ProjectReference ReferenceOutputAssembly="False" Include="$(XamarinFormsSource)Xamarin.Forms.Build.Tasks\Xamarin.Forms.Build.Tasks.csproj" />
     <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Core\Xamarin.Forms.Core.csproj" />
     <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.CustomAttributes\Xamarin.Forms.CustomAttributes.csproj" />
-    <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Maps\Xamarin.Forms.Maps.csproj" />
+    <ProjectReference Condition="'$(IncludeMaps)' == 'true'" Include="$(XamarinFormsSource)Xamarin.Forms.Maps\Xamarin.Forms.Maps.csproj" />
     <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Xaml\Xamarin.Forms.Xaml.csproj" />
-    <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.DualScreen\Xamarin.Forms.DualScreen.csproj" />
+    <ProjectReference Condition="'$(IncludeDualScreen)' == 'true'" Include="$(XamarinFormsSource)Xamarin.Forms.DualScreen\Xamarin.Forms.DualScreen.csproj" />
   </ItemGroup>
 
   <Import Project="$(XamarinFormsSource).nuspec\Xamarin.Forms.targets" Condition="'$(BuildingInsideVisualStudio)' == 'true'" />

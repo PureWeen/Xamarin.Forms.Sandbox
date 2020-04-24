@@ -1,0 +1,14 @@
+<Project>
+  <ItemGroup>
+    <PackageReference ExcludeAssets="All" Include="Xamarin.Forms.Maps" Version="$(XamarinFormsVersion)">
+    </PackageReference>
+    <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Maps.iOS\Xamarin.Forms.Maps.iOS.csproj">
+      <Name>Xamarin.Forms.Maps.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+    <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Maps\Xamarin.Forms.Maps.csproj">
+      <Name>Xamarin.Forms.Maps</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
