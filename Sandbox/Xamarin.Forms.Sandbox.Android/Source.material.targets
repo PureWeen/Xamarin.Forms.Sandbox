@@ -1,0 +1,9 @@
+<Project>
+  <ItemGroup>
+    <PackageReference ExcludeAssets="All" Include="Xamarin.Forms.Visual.Material" Version="$(XamarinFormsVersion)">
+    </PackageReference>
+    <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Material.Android\Xamarin.Forms.Material.Android.csproj">
+      <Name>Xamarin.Forms.Material.iOS</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

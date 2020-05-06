@@ -1,5 +1,7 @@
 <Project>
   <Import Project="$(XamarinFormsSource)SampleImports\Directory.Build.targets" Condition="$(FromSource) == 'true'" />
+  <Import Condition="'$(IncludeMaterial)' == 'true'" Project="Source.material.targets"/>
+  <Import Condition="'$(IncludeMaps)' == 'true'" Project="Source.maps.targets"/>
   <!--<ItemGroup>
     <PackageReference ExcludeAssets="All" Include="Xamarin.Forms" Version="$(XamarinFormsVersion)">
     </PackageReference>
@@ -21,12 +23,12 @@
   </ItemGroup>-->
 
   <ItemGroup>
-    <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Material.Android\Xamarin.Forms.Material.Android.csproj">
+
+    <!--<ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Material.Android\Xamarin.Forms.Material.Android.csproj">
       <Name>Xamarin.Forms.Material.Android</Name>
     </ProjectReference>
     <PackageReference ExcludeAssets="All" Include="Xamarin.Forms.Visual.Material" Version="$(XamarinFormsVersion)">
     </PackageReference>
-    <!--
     <ProjectReference Condition="'$(AbiBreakTest)' == 'true'" PrivateAssets="All" Include="..\AbiBreak.Android\AbiBreak.Android.csproj">
       <Project>{6a5e6549-9d5f-4dd4-8d69-2ca96a705e14}</Project>
       <Name>AbiBreak.Android</Name>

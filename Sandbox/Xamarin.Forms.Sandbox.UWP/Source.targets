@@ -1,11 +1,4 @@
 <Project>
   <Import Project="$(XamarinFormsSource)SampleImports\Directory.Build.targets" Condition="$(FromSource) == 'true'" />
-  <ItemGroup>
-    <PackageReference  Condition="'$(IncludeMaps)' == 'true'"  ExcludeAssets="All" Include="Xamarin.Forms.Maps" Version="$(XamarinFormsVersion)">
-    </PackageReference>
-    <ProjectReference Condition="'$(IncludeMaps)' == 'true'"   Include="$(XamarinFormsSource)Xamarin.Forms.Maps.UWP\Xamarin.Forms.Maps.UWP.csproj">
-      <Name>Xamarin.Forms.Maps.UWP</Name>
-    </ProjectReference>
-  </ItemGroup>
-
+  <Import Condition="'$(IncludeMaps)' == 'true'" Project="Source.maps.targets"/>
 </Project>
