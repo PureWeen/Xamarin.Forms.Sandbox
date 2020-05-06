@@ -1,24 +1,5 @@
 <Project>
+  <Import Project="$(XamarinFormsSource)SampleImports\Directory.Build.targets" Condition="$(FromSource) == 'true'" />
   <Import Condition="'$(IncludeMaterial)' == 'true'" Project="Source.material.targets"/>
   <Import Condition="'$(IncludeMaps)' == 'true'" Project="Source.maps.targets"/>
-  <ItemGroup>
-    <PackageReference ExcludeAssets="All" Include="Xamarin.Forms" Version="$(XamarinFormsVersion)">
-    </PackageReference>
-    <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Core\Xamarin.Forms.Core.csproj">
-      <Name>Xamarin.Forms.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Platform.iOS\Xamarin.Forms.Platform.iOS.csproj">
-      <Name>Xamarin.Forms.Platform.iOS</Name>
-      <IsAppExtension>false</IsAppExtension>
-      <IsWatchApp>false</IsWatchApp>
-    </ProjectReference>
-    <ProjectReference Include="$(XamarinFormsSource)Stubs\Xamarin.Forms.Platform.iOS\Xamarin.Forms.Platform.iOS %28Forwarders%29.csproj">
-      <Name>Xamarin.Forms.Platform.iOS %28Forwarders%29</Name>
-      <IsAppExtension>false</IsAppExtension>
-      <IsWatchApp>false</IsWatchApp>
-    </ProjectReference>
-    <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Xaml\Xamarin.Forms.Xaml.csproj">
-      <Name>Xamarin.Forms.Xaml</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>
