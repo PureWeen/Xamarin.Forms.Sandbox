@@ -1,11 +1,11 @@
 <Project>
   <PropertyGroup>
     <SampleProject>true</SampleProject>
+    <FromSource Condition="'$(FromSource)' == ''">true</FromSource>
   </PropertyGroup>
   <Import Project="..\Xamarin.Forms\SampleImports\Directory.Build.props" Condition="$(FromSource) == 'true'" />
   <PropertyGroup>
     <XamarinFormsSource>..\..\Xamarin.Forms\</XamarinFormsSource>
-    <FromSource Condition="'$(FromSource)' == ''">true</FromSource>
     <IncludeDualScreen Condition="'$(IncludeDualScreen)' == ''">false</IncludeDualScreen>
     <IncludeMaterial Condition="'$(IncludeMaterial)' == ''">false</IncludeMaterial>
     <IncludeMaps Condition="'$(IncludeMaps)' == ''">false</IncludeMaps>
