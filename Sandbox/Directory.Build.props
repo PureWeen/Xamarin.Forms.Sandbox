@@ -1,19 +1,13 @@
 <Project>
   <PropertyGroup>
-    <SampleProject>true</SampleProject>
-    <FromSource Condition="'$(FromSource)' == ''">true</FromSource>
-  </PropertyGroup>
-  <Import Project="..\Xamarin.Forms\SampleImports\Directory.Build.props" Condition="$(FromSource) == 'true'" />
-  <PropertyGroup>
-    <XamarinFormsSource>..\..\Xamarin.Forms\</XamarinFormsSource>
     <IncludeDualScreen Condition="'$(IncludeDualScreen)' == ''">false</IncludeDualScreen>
     <IncludeMaterial Condition="'$(IncludeMaterial)' == ''">false</IncludeMaterial>
-    <IncludeMaps Condition="'$(IncludeMaps)' == ''">false</IncludeMaps>
-    
+    <IncludeMaps Condition="'$(IncludeMaps)' == ''">false</IncludeMaps>    
     <AbiBreakTest Condition="'$(AbiBreakTest)' == ''">false</AbiBreakTest>
     <FromSource Condition="'$(AbiBreakTest)' == 'true'">true</FromSource>
-    <XamarinFormsVersion>4.6.0.494-pre2</XamarinFormsVersion>
-  
+    <XamarinFormsVersion>4.6.0.494-pre2</XamarinFormsVersion>  
     <DefineConstants Condition="'$(IncludeMaterial)' == 'true'">$(DefineConstants);VISUAL</DefineConstants>
   </PropertyGroup>
+  
+  <Import Project="..\Xamarin.Forms\SampleImports\Directory.Build.props" />
  </Project>

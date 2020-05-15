@@ -2,38 +2,4 @@
   <Import Project="$(XamarinFormsSource)SampleImports\Directory.Build.targets" Condition="$(FromSource) == 'true'" />
   <Import Condition="'$(IncludeMaterial)' == 'true'" Project="Source.material.targets"/>
   <Import Condition="'$(IncludeMaps)' == 'true'" Project="Source.maps.targets"/>
-  <!--<ItemGroup>
-    <PackageReference ExcludeAssets="All" Include="Xamarin.Forms" Version="$(XamarinFormsVersion)">
-    </PackageReference>
-    <ProjectReference Include="$(XamarinFormsSource)Stubs\Xamarin.Forms.Platform.Android\Xamarin.Forms.Platform.Android %28Forwarders%29.csproj">
-      <Name>Xamarin.Forms.Platform.Android %28Forwarders%29</Name>
-    </ProjectReference>
-    <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Platform.Android.FormsViewGroup\Xamarin.Forms.Platform.Android.FormsViewGroup.csproj">
-      <Name>Xamarin.Forms.Platform.Android.FormsViewGroup</Name>
-    </ProjectReference>
-    <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Platform.Android\Xamarin.Forms.Platform.Android.csproj">
-      <Name>Xamarin.Forms.Platform.Android</Name>
-    </ProjectReference>
-    <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Core\Xamarin.Forms.Core.csproj">
-      <Name>Xamarin.Forms.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Xaml\Xamarin.Forms.Xaml.csproj" >
-      <Name>Xamarin.Forms.Xaml</Name>
-    </ProjectReference>
-  </ItemGroup>-->
-
-  <ItemGroup>
-
-    <!--<ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.Material.Android\Xamarin.Forms.Material.Android.csproj">
-      <Name>Xamarin.Forms.Material.Android</Name>
-    </ProjectReference>
-    <PackageReference ExcludeAssets="All" Include="Xamarin.Forms.Visual.Material" Version="$(XamarinFormsVersion)">
-    </PackageReference>
-    <ProjectReference Condition="'$(AbiBreakTest)' == 'true'" PrivateAssets="All" Include="..\AbiBreak.Android\AbiBreak.Android.csproj">
-      <Project>{6a5e6549-9d5f-4dd4-8d69-2ca96a705e14}</Project>
-      <Name>AbiBreak.Android</Name>
-    </ProjectReference>
-    <PackageReference ExcludeAssets="All" Include="Xamarin.Forms.Maps" Version="$(XamarinFormsVersion)">
-    </PackageReference>-->
-  </ItemGroup>
 </Project>

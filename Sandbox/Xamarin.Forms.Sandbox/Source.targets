@@ -3,10 +3,12 @@
   <Import Project="$(XamarinFormsSource)SampleImports\Directory.Build.targets" Condition="$(FromSource) == 'true'" />
 
   <ItemGroup>
-    <ProjectReference Condition="'$(IncludeDualScreen)' == 'true'" Include="$(XamarinFormsSource)Xamarin.Forms.DualScreen\Xamarin.Forms.DualScreen.csproj" />
-    <ProjectReference Condition="'$(IncludeMaps)' == 'true'" Include="$(XamarinFormsSource)Xamarin.Forms.Maps\Xamarin.Forms.Maps.csproj" />
+    <ProjectReference Condition="'$(IncludeDualScreen)' == 'true'" Include="$(XamarinFormsSource)Xamarin.Forms.DualScreen\Xamarin.Forms.DualScreen.csproj" />  
+    
+    <ProjectReference Condition="'$(IncludeMaps)' == 'true'" Include="$(XamarinFormsSource)Xamarin.Forms.Maps\Xamarin.Forms.Maps.csproj" />    
     <PackageReference Condition="'$(IncludeMaps)' == 'true'" ExcludeAssets="All" Include="Xamarin.Forms.Maps" Version="$(XamarinFormsVersion)">
-    </PackageReference>
+    </PackageReference>    
+    
     <PackageReference  Condition="'$(IncludeMaterial)' == 'true'" ExcludeAssets="All" Include="Xamarin.Forms.Visual.Material" Version="$(XamarinFormsVersion)">
     </PackageReference>
   </ItemGroup>

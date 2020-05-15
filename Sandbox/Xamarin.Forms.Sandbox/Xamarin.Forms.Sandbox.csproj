@@ -10,11 +10,6 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Directory.Build.targets" />
-    <None Remove="Nuget.targets" />
-    <None Remove="Source.targets" />
-  </ItemGroup>
 
   <!--<ItemGroup>
     <PackageReference IncludeAssets="compile" Include="ReactiveUI.Events.XamForms" Version="11.1.11" />

@@ -1,7 +1,0 @@
-<Project>
-  <!-- this makes sure the build tasks dll is generated into nuspec folder for Xamarin.Forms.targets -->
-  <Target Name="EnsureXamarinFormsTasksBuilt" BeforeTargets="Restore">
-    <MSBuild Projects="$(XamarinFormsSource)\Xamarin.Forms.Build.Tasks\Xamarin.Forms.Build.Tasks.csproj" Targets="Restore"></MSBuild>
-    <MSBuild Projects="$(XamarinFormsSource)\Xamarin.Forms.Build.Tasks\Xamarin.Forms.Build.Tasks.csproj"></MSBuild>
-  </Target>
- </Project>
