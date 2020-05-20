@@ -1,3 +1,9 @@
 [submodule "Xamarin.Forms"]
 	path = Xamarin.Forms
 	url = https://github.com/xamarin/Xamarin.Forms.git
+[submodule "Xamarin.Forms.AppBar"]
+	path = Xamarin.Forms.AppBar
+	url = git@github.com:jsuarezruiz/Xamarin.Forms.AppBar.git
+[submodule "Xamarin.Forms.TabView"]
+	path = Xamarin.Forms.TabView
+	url = git@github.com:jsuarezruiz/Xamarin.Forms.TabView.git

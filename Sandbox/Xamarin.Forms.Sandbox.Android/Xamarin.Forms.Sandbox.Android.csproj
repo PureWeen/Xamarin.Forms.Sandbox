@@ -52,12 +52,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuildShellRenderer.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProguardConfiguration Include="proguard.cfg" />
+    <AndroidAsset Include="Assets\Roboto-Medium.ttf" />
+    <AndroidAsset Include="Assets\materialdesignicons-webfont.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
@@ -87,6 +90,10 @@
     <Folder Include="Resources\drawable-xxxhdpi\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Xamarin.Forms.AppBar\src\Xamarin.Forms.AppBar\Xamarin.Forms.AppBar.csproj">
+      <Project>{ce2af503-3a8c-40f5-b225-d5dc4742d71a}</Project>
+      <Name>Xamarin.Forms.AppBar</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Xamarin.Forms.Sandbox\Xamarin.Forms.Sandbox.csproj">
       <Project>{e155c410-e5de-464d-9ed7-2b1e672438ed}</Project>
       <Name>Xamarin.Forms.Sandbox</Name>
