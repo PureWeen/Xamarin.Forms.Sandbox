@@ -29,6 +29,11 @@ namespace Xamarin.Forms.Sandbox.Droid
         {
             return new AppBarToolbarTracker(this, toolbar, ((IShellContext)this).CurrentDrawerLayout);
         }
+
+        //protected override IShellItemRenderer CreateShellItemRenderer(ShellItem shellItem)
+        //{
+        //    return new TabViewShellRenderer(this);
+        //}
     }
 
     public class AppBarToolbarTracker : IShellToolbarTracker
@@ -52,14 +57,21 @@ namespace Xamarin.Forms.Sandbox.Droid
             _appBar = Toolbar.Parent.GetParentOfType<AppBarLayout>();
             _globalLayoutListener = new GenericGlobalLayoutListener(OnUpdateLayout);
             _appBar.ViewTreeObserver.AddOnGlobalLayoutListener(_globalLayoutListener);
+
+            Toolbar.SetContentInsetsAbsolute(0, 0);
+            Toolbar.SetContentInsetsRelative(0, 0);
         }
+
+        int width;
+        private bool canNavigateBack;
 
         void OnUpdateLayout()
         {
-            if (_titleViewContainer != null)
+            if (_titleViewContainer != null && width != _appBar.MeasuredWidth)
             {
+                width = _appBar.MeasuredWidth;
                 _titleViewContainer.LayoutParameters = new AndroidX.AppCompat.Widget.Toolbar.LayoutParams(_appBar.MeasuredWidth, LP.MatchParent);
-                Layout.LayoutChildIntoBoundingRegion(appBarView, new Rectangle(0, 0, _appBar.MeasuredWidth, _appBar.MeasuredHeight));
+                Layout.LayoutChildIntoBoundingRegion(appBarView, new Rectangle(0, 0, context.FromPixels(_appBar.MeasuredWidth), context.FromPixels(_appBar.MeasuredHeight)));
             }
         }
 
@@ -82,18 +94,48 @@ namespace Xamarin.Forms.Sandbox.Droid
             {
                 appBarView = new Xamarin.Forms.AppBar();
                 var renderer = Platform.Android.Platform.CreateRendererWithContext(appBarView, context);
-
                 _titleViewContainer = renderer.View;
-               // _titleViewContainer = new ContainerView(shellContext.AndroidContext, appBarView);
-                //_titleViewContainer.MatchHeight = _titleViewContainer.MatchWidth = true;
-                //_titleViewContainer.LayoutParameters = new Toolbar.LayoutParams(LP.MatchParent, LP.MatchParent);
                 Toolbar.AddView(_titleViewContainer);
-            }
 
-            appBarView.BackgroundColor = Color.Purple;
+                UpdateBackButtonText();
+
+                appBarView.BackCommand = new Command(OnBackButtonClicked);
+            }
         }
 
-        public bool CanNavigateBack { get; set; }
+        private async void OnBackButtonClicked(object obj)
+        {
+            if (CanNavigateBack)
+                await Page.Navigation.PopAsync();
+            else
+                shellContext.Shell.FlyoutIsPresented = true;            
+        }
+
+        public bool CanNavigateBack
+        {
+            get => canNavigateBack; 
+            set
+            {
+                canNavigateBack = value;
+                UpdateBackButtonText();
+            }
+        }
+
+        void UpdateBackButtonText()
+        {
+            if (appBarView != null)
+            {
+                if (!canNavigateBack)
+                {
+                    appBarView.BackButtonTitle = "Burger";
+                    appBarView.BarTextColor = Color.White;
+                }                
+                else
+                    appBarView.BackButtonTitle = null;
+            }
+
+        }
+
         public Color TintColor { get; set; }
 
         public void Dispose()

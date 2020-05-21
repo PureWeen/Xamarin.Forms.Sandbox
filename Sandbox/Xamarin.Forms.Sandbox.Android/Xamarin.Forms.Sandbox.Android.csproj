@@ -56,6 +56,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TabViewShellRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProguardConfiguration Include="proguard.cfg" />
@@ -93,6 +94,10 @@
     <ProjectReference Include="..\..\Xamarin.Forms.AppBar\src\Xamarin.Forms.AppBar\Xamarin.Forms.AppBar.csproj">
       <Project>{ce2af503-3a8c-40f5-b225-d5dc4742d71a}</Project>
       <Name>Xamarin.Forms.AppBar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Xamarin.Forms.TabView\src\Xamarin.Forms.TabView\Xamarin.Forms.TabView.csproj">
+      <Project>{308BA566-93B2-4CB8-86C4-B4D4986899A9}</Project>
+      <Name>Xamarin.Forms.TabView</Name>
     </ProjectReference>
     <ProjectReference Include="..\Xamarin.Forms.Sandbox\Xamarin.Forms.Sandbox.csproj">
       <Project>{e155c410-e5de-464d-9ed7-2b1e672438ed}</Project>

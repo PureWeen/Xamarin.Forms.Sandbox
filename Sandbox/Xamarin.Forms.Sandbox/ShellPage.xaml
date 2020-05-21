@@ -12,8 +12,20 @@
         </StackLayout>
     </Shell.FlyoutHeader>-->
     <FlyoutItem Title="Sandbox">
-        <Tab>
+        <Tab Title="Hi There 1">
             <ShellContent ContentTemplate="{DataTemplate local:MainPage}">
+            </ShellContent>
+        </Tab>
+        <Tab Title="Hi There 2">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}">
+            </ShellContent>
+        </Tab>
+        <Tab Title="Hi There 3">
+            <ShellContent Title="tab 1" ContentTemplate="{DataTemplate local:MainPage}">
+            </ShellContent>
+            <ShellContent Title="tab 2" ContentTemplate="{DataTemplate local:MainPage}">
+            </ShellContent>
+            <ShellContent Title="tab 3" ContentTemplate="{DataTemplate local:MainPage}">
             </ShellContent>
         </Tab>
     </FlyoutItem>

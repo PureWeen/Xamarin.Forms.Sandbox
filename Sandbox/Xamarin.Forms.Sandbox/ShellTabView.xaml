@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<tabview1:TabView  xmlns:tabview1="clr-namespace:Xamarin.Forms.TabView;assembly=Xamarin.Forms.TabView" 
+    xmlns:tabview="clr-namespace:Xamarin.Forms.Sandbox" 
+                       xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+            BackgroundColor="White"
+            TabStripPlacement="Bottom"
+             x:Class="Xamarin.Forms.Sandbox.ShellTabView">
+  
+</tabview1:TabView>
