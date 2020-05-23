@@ -30,10 +30,10 @@ namespace Xamarin.Forms.Sandbox.Droid
             return new AppBarToolbarTracker(this, toolbar, ((IShellContext)this).CurrentDrawerLayout);
         }
 
-        //protected override IShellItemRenderer CreateShellItemRenderer(ShellItem shellItem)
-        //{
-        //    return new TabViewShellRenderer(this);
-        //}
+        protected override IShellItemRenderer CreateShellItemRenderer(ShellItem shellItem)
+        {
+            return new TabViewShellRenderer(this);
+        }
     }
 
     public class AppBarToolbarTracker : IShellToolbarTracker
