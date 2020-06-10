@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="dopetest_xamarin.App">
+    <Application.Resources>
+        <Style TargetType="Label" ApplyToDerivedTypes="True">
+            <Setter Property="FontFamily" Value="IBMPlexMono" />
+            <Setter Property="FontSize" Value="15" />
+        </Style>
+        <Style TargetType="Button" ApplyToDerivedTypes="True">
+            <Setter Property="FontFamily" Value="IBMPlexMono" />
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="BorderWidth" Value="0" />
+            <Setter Property="BackgroundColor" Value="Red" />
+            <Setter Property="WidthRequest" Value="96" />
+            <Setter Property="HeightRequest" Value="30" />
+            <Setter Property="Padding" Value="3, 3, 3, 3" />
+            <Style.Triggers>
+                    <Trigger TargetType="Button" Property="IsEnabled" Value="False">
+                        <Setter Property="BackgroundColor" Value="DarkSlateGray" />
+                    </Trigger>
+            </Style.Triggers>
+        </Style>
+
+    </Application.Resources>
+</Application>

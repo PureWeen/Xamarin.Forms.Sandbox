@@ -42,7 +42,7 @@ namespace Xamarin.Forms.Sandbox
                 "AppTheme_Experimental",
                 "MediaElement_Experimental"});
 
-            return new App();
+            return new dopetest_xamarin.App();
         }
     }
 }
