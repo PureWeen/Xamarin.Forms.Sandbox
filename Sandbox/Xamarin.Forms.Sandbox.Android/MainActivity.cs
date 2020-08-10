@@ -14,6 +14,9 @@ namespace Xamarin.Forms.Sandbox.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+#if DUALSCREEN
+            global::Xamarin.Forms.DualScreen.DualScreenService.Init(this);
+#endif
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 

@@ -1,0 +1,9 @@
+<Project>
+  <ItemGroup>
+    <PackageReference ExcludeAssets="All" Include="Xamarin.Forms.DualScreen" Version="$(XamarinFormsVersion)">
+    </PackageReference>
+    <ProjectReference Include="$(XamarinFormsSource)Xamarin.Forms.DualScreen\Xamarin.Forms.DualScreen.csproj">
+      <Name>Xamarin.Forms.DualScreen</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

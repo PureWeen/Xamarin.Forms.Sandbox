@@ -9,5 +9,8 @@
     <DefineConstants Condition="'$(IncludeMaterial)' == 'true'">$(DefineConstants);VISUAL</DefineConstants>
   </PropertyGroup>
   
+  <PropertyGroup>
+    <DefineConstants Condition="'$(IncludeDualScreen)' == 'true'">$(DefineConstants);DUALSCREEN</DefineConstants>
+  </PropertyGroup>
   <Import Project="..\Xamarin.Forms\SampleImports\Directory.Build.props" />
  </Project>

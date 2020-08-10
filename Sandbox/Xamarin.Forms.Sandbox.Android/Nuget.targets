@@ -6,5 +6,7 @@
     </PackageReference>
     <PackageReference Include="Xamarin.Forms.Visual.Material" Version="$(XamarinFormsVersion)">
     </PackageReference>
+    <PackageReference Include="Xamarin.Forms.DualScreen" Version="$(XamarinFormsVersion)">
+    </PackageReference>
   </ItemGroup>
 </Project>
