@@ -15,7 +15,6 @@ namespace Xamarin.Forms.Sandbox
 	{
 		public App()
 		{
-			Device.SetFlags(new[] { "Shell_UWP_Experimental", "CollectionView_Experimental" });
 			InitializeMainPage();
 		}
 

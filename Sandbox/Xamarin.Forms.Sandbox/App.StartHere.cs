@@ -33,14 +33,18 @@ namespace Xamarin.Forms.Sandbox
 
         public static Application GetApplication()
         {
-            Forms.Device.SetFlags(new List<string> { 
-                "Shell_UWP_Experimental", 
+            Forms.Device.SetFlags(new List<string> {
+                "Shell_UWP_Experimental",
                 "StateTriggers_Experimental",
                 "IndicatorView_Experimental",
                 "CarouselView_Experimental",
                 "SwipeView_Experimental",
                 "AppTheme_Experimental",
-                "MediaElement_Experimental"});
+                "MediaElement_Experimental",
+                "RadioButton_Experimental",
+                "DragAndDrop_Experimental",
+                "Shapes_Experimental",
+                "Brush_Experimental"});
 
             return new App();
         }
