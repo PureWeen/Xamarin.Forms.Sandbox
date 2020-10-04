@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Xamarin.Forms.Sandbox
 {
+    [Obsolete]
     public abstract class TestMasterDetailPage : MasterDetailPage
     {
         protected TestMasterDetailPage()

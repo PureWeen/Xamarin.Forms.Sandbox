@@ -9,6 +9,7 @@ using Xamarin.Forms.Xaml;
 
 namespace Xamarin.Forms.Sandbox
 {
+#pragma warning disable CS0618 // Type or member is obsolete
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MDP : MasterDetailPage
     {
@@ -34,3 +35,4 @@ namespace Xamarin.Forms.Sandbox
         }
     }
 }
+#pragma warning restore CS0618 // Type or member is obsolete

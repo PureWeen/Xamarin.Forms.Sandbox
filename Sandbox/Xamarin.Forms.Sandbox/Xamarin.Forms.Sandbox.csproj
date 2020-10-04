@@ -2,15 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <NoWarn>$(NoWarn);NU1605</NoWarn>
+    <NoWarn>$(NoWarn);NU1605;CS0612</NoWarn>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebugType>portable</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
-
-
+  
+  
   <!--<ItemGroup>
     <PackageReference IncludeAssets="compile" Include="ReactiveUI.Events.XamForms" Version="11.1.11" />
     <PackageReference IncludeAssets="compile" Include="ReactiveUI.XamForms" Version="11.1.11" />
