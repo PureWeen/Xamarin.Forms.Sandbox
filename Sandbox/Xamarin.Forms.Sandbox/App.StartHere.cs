@@ -16,6 +16,7 @@ namespace Xamarin.Forms.Sandbox
 
             bool useTabPage = false;
             bool useMDP = false;
+            bool useFlyoutPage = false;
             bool useMainPage = false;
             bool useNavigationPage = false;
 
@@ -23,6 +24,8 @@ namespace Xamarin.Forms.Sandbox
                 MainPage = new NavigationPage(new MainPage());
             else if (useMainPage)
                 MainPage = new MainPage();
+            else if (useFlyoutPage)
+                MainPage = new FlyoutPage();
             else if (useMDP)
 #pragma warning disable CS0612 // Type or member is obsolete
                 MainPage = new MDP();
