@@ -26,6 +26,7 @@ namespace Xamarin.Forms.Sandbox
                 MainPage = new MainPage();
             else if (useFlyoutPage)
                 MainPage = new FlyoutPage();
+                MainPage = new FPage();
             else if (useMDP)
 #pragma warning disable CS0612 // Type or member is obsolete
                 MainPage = new MDP();
