@@ -15,7 +15,6 @@ namespace Xamarin.Forms.Sandbox
             Routing.RegisterRoute(nameof(MainPage), typeof(MainPage));
 
             bool useTabPage = false;
-            bool useMDP = false;
             bool useFlyoutPage = false;
             bool useMainPage = false;
             bool useNavigationPage = false;
@@ -25,12 +24,7 @@ namespace Xamarin.Forms.Sandbox
             else if (useMainPage)
                 MainPage = new MainPage();
             else if (useFlyoutPage)
-                MainPage = new FlyoutPage();
                 MainPage = new FPage();
-            else if (useMDP)
-#pragma warning disable CS0612 // Type or member is obsolete
-                MainPage = new MDP();
-#pragma warning restore CS0612 // Type or member is obsolete
             else if (useTabPage)
                 MainPage = new TabPage();
             else
